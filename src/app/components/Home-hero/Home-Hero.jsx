@@ -7,7 +7,7 @@ import HeroCta from '../Call-to-action'
 export default function HomeHero() {
   return (
     <section aria-labelledby="hero-heading">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 sm:py-10">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 sm:py-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
           
           {/* LEFT: Solid primary card with subtle texture/gradient */}
@@ -67,7 +67,7 @@ export default function HomeHero() {
       </div>
 
       {/* Quote + name */}
-<blockquote className="mt-1 text-[var(--text-100)] text-sm sm:text-[15px] italic">
+<blockquote className="mt-1 text-[var(--text-100)] text-xs sm:text-[15px] italic">
   “Professional, fast, and flawless results. Highly recommend.”
 </blockquote>
       <div className="mt-1 text-[13px] text-[var(--text-300)]">
