@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* ===== THEME COLORS ===== */
+:root {
+  /* Light mode colors */
+  --primary-100: #005B99;
+  --primary-200: #4e88ca;
+  --primary-300: #b7e9ff;
+
+  --accent-100: #FFD700;
+  --accent-200: #e9aa2b;
+
+  --text-100: #333333;
+  --text-200: #5c5c5c;
+
+  --bg-100: #F5F5F5;
+  --bg-200: #ebebeb;
+  --bg-300: #c2c2c2;
+
+  /* Default background/foreground */
+  --background: var(--bg-100);
+  --foreground: var(--text-100);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+/* ===== Dark Mode ===== */
+
+
+/* ===== Global Styles ===== */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
