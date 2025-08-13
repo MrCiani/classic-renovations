@@ -17,10 +17,14 @@ export default function Home() {
   return (
 <div>
   <Navigation/>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.4} >
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.3} >
         <HomeHero />
+   
       </SectionBackground>
-      <PaintingServices/>
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.3}>
+          <PaintingServices/>
+      </SectionBackground>
+      
   
 </div>
 
