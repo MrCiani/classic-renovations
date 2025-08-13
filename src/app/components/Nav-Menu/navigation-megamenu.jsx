@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useId } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import HeroCta from '../Call-to-action'
+import HeroCta from '../cta-folder/Call-to-action'
 import Link from 'next/link'
 import { Paintbrush, SprayCan, Sparkles, Layers, Home, Droplet, SquareStack, Palette, Brush } from 'lucide-react'
 

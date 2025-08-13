@@ -1,6 +1,7 @@
 import Navigation from "./components/Nav-Menu/navigation";
 import HomeHero from "./components/Home-hero/Home-Hero";
 import PaintingServices from "./components/Services-offered/Services";
+import TrustedBy from "./components/trustedbadges-testimonials/trusted-business";
 import SectionBackground from "./components/Image-Background";
 
 
@@ -17,11 +18,11 @@ export default function Home() {
   return (
 <div>
   <Navigation/>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.3} >
+      <SectionBackground image="/Background-Images/bgimage1.jpg"  >
         <HomeHero />
-   
+        <TrustedBy/>
       </SectionBackground>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.3}>
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
           <PaintingServices/>
       </SectionBackground>
       

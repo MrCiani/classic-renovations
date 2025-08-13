@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { Star } from 'lucide-react'
-import HeroCta from '../Call-to-action'
+import HeroCta from '../cta-folder/Call-to-action'
 
 export default function HomeHero() {
   return (
