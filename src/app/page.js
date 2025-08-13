@@ -1,7 +1,9 @@
 import Navigation from "./components/Nav-Menu/navigation";
 import HomeHero from "./components/Home-hero/Home-Hero";
-import PaintingServices from "./components/Services-offered/Services";
 import TrustedBy from "./components/trustedbadges-testimonials/trusted-business";
+import PaintingServices from "./components/Services-offered/Services";
+import TestimonialsRow from "./components/trustedbadges-testimonials/TestimonialsShowcase";
+import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
 
 
@@ -24,8 +26,11 @@ export default function Home() {
       </SectionBackground>
       <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
           <PaintingServices/>
+          <TestimonialsRow />
       </SectionBackground>
       
+
+      <SiteFooter/>
   
 </div>
 
