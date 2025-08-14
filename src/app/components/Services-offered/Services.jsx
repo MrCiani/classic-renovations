@@ -6,6 +6,8 @@ import HeroCta2 from '../cta-folder/call-to-action2'
 import Link from 'next/link'
 import { Paintbrush, Home as HomeIcon, Layers, SquareStack, ArrowRight, CheckCircle2 } from 'lucide-react'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL 
+
 const services = [
   {
     title: 'Interior Painting',
@@ -70,9 +72,7 @@ const services = [
 ]
 
 export default function ServicesOffered() {
-  // Build absolute URLs for JSON-LD when running in the browser
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
-
+  // Build a deterministic JSON-LD (no window)
   const servicesJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -86,17 +86,13 @@ export default function ServicesOffered() {
         serviceType: s.title,
         areaServed: { '@type': 'AdministrativeArea', name: 'Greater Toronto Area' },
         provider: { '@type': 'Organization', name: 'Classic Contracting' },
-        url: baseUrl ? `${baseUrl}${s.path}` : s.path,
+        url: `${SITE_URL}${s.path}`, // stable on server & client
       },
     })),
   }
 
   return (
-    <section
-      id="painting-services"
-      aria-labelledby="painting-services-title"
-      className="py-24 px-6 text-center"
-    >
+    <section id="painting-services" aria-labelledby="painting-services-title" className="py-24 px-6 text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -104,22 +100,14 @@ export default function ServicesOffered() {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto"
       >
-        {/* SEO-friendly heading + your original headline as subtitle */}
-        <h2
-          id="painting-services-title"
-          className="text-4xl md:text-5xl font-bold text-[var(--text-100)] mb-2"
-        >
+        <h2 id="painting-services-title" className="text-4xl md:text-5xl font-bold text-[var(--text-100)] mb-2">
           Painting Services in Toronto & the GTA
         </h2>
         <p className="text-lg text-[var(--text-200)] mb-4 max-w-3xl mx-auto">
           Builder-grade results from schedule-safe crews. High-rise/mid-rise suites, corridors & amenities — spec-driven, safety-first, turnover-ready.
         </p>
 
-        {/* Services Grid as a semantic list */}
-        <ul
-          className="grid grid-cols-1 mt-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10 text-left"
-          role="list"
-        >
+        <ul className="grid grid-cols-1 mt-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10 text-left" role="list">
           {services.map((service, i) => {
             const Icon = service.icon
             return (
@@ -148,19 +136,14 @@ export default function ServicesOffered() {
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <span
-                      className="inline-grid place-items-center w-10 h-10 rounded-xl
-                                 bg-[var(--primary-300)]/50 text-[var(--primary-100)]
-                                 ring-1 ring-[var(--primary-100)]/20"
+                      className="inline-grid place-items-center w-10 h-10 rounded-xl bg-[var(--primary-300)]/50 text-[var(--primary-100)] ring-1 ring-[var(--primary-100)]/20"
                       aria-hidden="true"
                     >
                       <Icon className="w-5 h-5" />
                     </span>
-                    <h3 className="text-xl font-semibold text-[var(--text-100)]">
-                      {service.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-[var(--text-100)]">{service.title}</h3>
                   </div>
 
-                  {/* Key points */}
                   <ul className="mb-5 flex-1 space-y-2">
                     {service.points.slice(0, 4).map((p) => (
                       <li key={p} className="flex items-start gap-2 text-sm text-[var(--text-200)]">
@@ -172,9 +155,7 @@ export default function ServicesOffered() {
 
                   <Link
                     href={service.path}
-                    className="group inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium
-                               bg-[var(--primary-100)] text-white shadow-sm hover:opacity-90 focus:outline-none
-                               focus-visible:ring-2 focus-visible:ring-[var(--primary-100)] mt-auto gap-2"
+                    className="group inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-[var(--primary-100)] text-white shadow-sm hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-100)] mt-auto gap-2"
                     aria-label={`Learn more about ${service.title} in Toronto & the GTA`}
                   >
                     <span className="text-white">Learn More</span>
@@ -188,9 +169,10 @@ export default function ServicesOffered() {
 
         <HeroCta2 />
 
-        {/* JSON-LD for services list */}
+        {/* Deterministic JSON-LD (same on server & client). suppressHydrationWarning is extra safety. */}
         <script
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
         />
       </motion.div>

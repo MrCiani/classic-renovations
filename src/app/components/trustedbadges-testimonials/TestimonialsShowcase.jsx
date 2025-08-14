@@ -45,7 +45,7 @@ export default function TestimonialsCards({
       </header>
 
       {/* Mobile: swipeable row */}
-      <div className="md:hidden overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar -mx-4 px-4">
+      <div className="md:hidden overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar px-4">
         <ul className="flex gap-4 w-max">
           {testimonials.map((t) => (
             <li key={t.name} className="snap-start shrink-0 w-[86vw] max-w-[360px]">

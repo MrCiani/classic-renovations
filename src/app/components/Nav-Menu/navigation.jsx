@@ -53,7 +53,7 @@ export default function Navigation() {
           {/* CHANGED: make logo taller so it’s readable */}
 <Link href="/" className="block h-full shrink-0">
   <Image
-    src="/cclogo2.jpg"
+    src="/cclogo.svg"
     alt="Classic Contracting Logo"
     width={260}
     height={90}

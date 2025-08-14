@@ -49,7 +49,7 @@ export default function Home() {
       <main id="main-content">
         <SectionBackground image="/Background-Images/bgimage1.jpg">
           <HomeHero />              {/* put the ONLY <h1> here */}
-          <TrustedBy />             {/* has id="trusted-by" inside now */}
+          <TrustedBy />             has id="trusted-by" inside now
           <HomeValueProp />         {/* ensure this uses an <h2>, not <h1> */}
         </SectionBackground>
 
