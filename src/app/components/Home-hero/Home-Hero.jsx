@@ -54,8 +54,8 @@ export default function HomeHero() {
     {/* Avatars */}
     <div className="flex -space-x-2 shrink-0 pt-1">
       <Image src="/avatars/jeremyj.jpg" alt="Jeremy J." width={44} height={44} className="h-11 w-11 rounded-full border border-[var(--border)] object-cover" />
-      <Image src="/avatars/phillipe.jpg" alt="Phillipe M." width={44} height={44} className="h-11 w-11 rounded-full border border-[var(--border)] object-cover" />
-      <Image src="/avatars/mason.jpg" alt="Mason K." width={44} height={44} className="h-11 w-11 rounded-full border border-[var(--border)] object-cover" />
+      <Image src="/avatars/phillipe.jpg" alt="Phillipe Gooli." width={44} height={44} className="h-11 w-11 rounded-full border border-[var(--border)] object-cover" />
+      <Image src="/avatars/phillipMason.jpg" alt="Phillip Mason." width={44} height={44} className="h-11 w-11 rounded-full border border-[var(--border)] object-cover" />
     </div>
 
     <figcaption className="flex-1">
@@ -71,7 +71,7 @@ export default function HomeHero() {
   “Professional, fast, and flawless results. Highly recommend.”
 </blockquote>
       <div className="mt-1 text-[13px] text-[var(--text-300)]">
-        — <span className="font-semibold text-[var(--text-100)]">David P.</span>, Toronto
+        — <span className="font-semibold text-[var(--text-100)]">Phillip Mason </span>, Toronto
       </div>
     </figcaption>
   </figure>

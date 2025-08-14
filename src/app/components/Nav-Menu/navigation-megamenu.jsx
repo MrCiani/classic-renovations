@@ -91,7 +91,7 @@ export default function ServicesMegaMenu() {
           id={menuId}
           role="menu"
           className="
-            absolute left-0 top-full mt-2 w-[980px]
+            absolute left-0 top-full mt-2 w-[960px]
             rounded-2xl border border-[var(--border)] bg-[var(--bg-100)] shadow-xl z-50
             grid grid-cols-[1.4fr_1fr] gap-6 p-6
           "

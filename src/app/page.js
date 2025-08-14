@@ -3,6 +3,7 @@ import HomeHero from "./components/Home-hero/Home-Hero";
 import TrustedBy from "./components/trustedbadges-testimonials/trusted-business";
 import PaintingServices from "./components/Services-offered/Services";
 import TestimonialsRow from "./components/trustedbadges-testimonials/TestimonialsShowcase";
+import WhyChooseUs from "./components/whychooseus/why-choose-us";
 import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
 
@@ -28,6 +29,7 @@ export default function Home() {
           <PaintingServices/>
           <TestimonialsRow />
       </SectionBackground>
+      <WhyChooseUs/>
       
 
       <SiteFooter/>

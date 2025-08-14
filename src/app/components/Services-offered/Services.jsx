@@ -4,58 +4,133 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import HeroCta2 from '../cta-folder/call-to-action2'
 import Link from 'next/link'
-import { Building2, Home, Paintbrush, PanelsTopLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Building2, Home, Paintbrush, PanelsTopLeft, ArrowRight, CheckCircle2,Sparkles,Layers,SquareStack , Droplet , SprayCan , Palette  } from 'lucide-react'
 
 const services = [
   {
-    title: 'Commercial & Multi-Unit',
-    image: '/Service-Images/commercial.jpg',
-    path: '/services/commercial-painting',
-    icon: Building2,
+    title: 'Interior Painting',
+    image: '/Service-Images/interior.jpg',
+    path: '/painting/interior',
+    icon: Paintbrush,
     points: [
-      'Spec-driven systems',
-
-      'Coordinated with GCs/supers',
-      'Clean, safe sites'
+      'Walls, ceilings, trim, feature walls',
+      'Dust-controlled prep & surface repair',
+      'Crisp lines & even coverage'
     ]
   },
   {
     title: 'Exterior Painting',
     image: '/Service-Images/exterior.jpg',
-    path: '/services/exterior-painting',
+    path: '/painting/exterior',
     icon: Home,
     points: [
-      'Stucco/EIFS, metal, masonry',
-      'Weatherproof coatings',
-      'Low/zero-VOC options',
-      // 'Detailed trims & railings'
-    ]
-  },
-  {
-    title: 'Interior Painting',
-    image: '/Service-Images/interior.jpg',
-    path: '/services/interior-painting',
-    icon: Paintbrush,
-    points: [
-      'Dust-controlled prep',
-      'Crisp lines & coverage',
-      'Suites, corridors, amenities',
-      // 'Efficient turnovers'
+      'Siding, brick, stucco, soffits',
+      'Weatherproof coatings & sealants',
+      'Low/zero-VOC options available'
     ]
   },
   {
     title: 'Cabinet Refinishing',
     image: '/Service-Images/cabinet.jpg',
-    path: '/services/cabinet-refinishing',
-    icon: PanelsTopLeft,
+    path: '/painting/cabinets',
+    icon: Sparkles,
     points: [
-      'Factory-smooth spraying',
-      'Durable, wipe-clean enamel',
-      // 'Pro prep & priming',
-      'Kitchen + vanity'
+      'Kitchen & vanity spraying',
+      'Factory-smooth finish',
+      'Durable, wipe-clean enamel surfaces'
+    ]
+  },
+  {
+    title: 'Trim & Doors',
+    image: '/Service-Images/trim-doors.jpg',
+    path: '/painting/trim-doors',
+    icon: Layers,
+    points: [
+      'Baseboards, casings, doors, rails',
+      'Detailed prep for smooth results',
+      'Premium finishes for durability'
+    ]
+  },
+  {
+    title: 'Drywall & Patching',
+    image: '/Service-Images/drywall.jpg',
+    path: '/painting/drywall',
+    icon: SquareStack,
+    points: [
+      'Repairs for holes & cracks',
+      'Skim coating & texture removal',
+      'Seamless blending with existing surfaces'
+    ]
+  },
+  {
+    title: 'Deck & Fence Staining',
+    image: '/Service-Images/deck-fence.jpg',
+    path: '/painting/deck-fence-staining',
+    icon: Droplet,
+    points: [
+      'Transparent to solid stains',
+      'Protective coatings against weather',
+      'Enhance wood grain & colour'
+    ]
+  },
+  {
+    title: 'Spray Finishes',
+    image: '/Service-Images/spray-finishes.jpg',
+    path: '/painting/spray-finishes',
+    icon: SprayCan,
+    points: [
+      'Airless & HVLP flawless coats',
+      'Even coverage with professional equipment',
+      'Fast-drying, long-lasting finish'
+    ]
+  },
+  {
+    title: 'Colour Consultation',
+    image: '/Service-Images/colour-consultation.jpg',
+    path: '/painting/colour-consultation',
+    icon: Palette,
+    points: [
+      'Custom palettes for your space',
+      'Sample boards & test areas',
+      'Expert coordination with furnishings'
+    ]
+  },
+  {
+    title: 'Residential',
+    image: '/Service-Images/residential.jpg',
+    path: '/painting/residential',
+    icon: Paintbrush,
+    points: [
+      'Condos, homes, apartments',
+      'Interior & exterior services',
+      'High-quality finishes with minimal disruption'
+    ]
+  },
+  {
+    title: 'Commercial',
+    image: '/Service-Images/commercial.jpg',
+    path: '/painting/commercial',
+    icon: Layers,
+    points: [
+      'Retail, offices, common areas',
+      'Spec-driven systems & materials',
+      'Coordinated with GCs/supers'
+    ]
+  },
+  {
+    title: 'Multi-Unit / PM',
+    image: '/Service-Images/multi-unit.jpg',
+    path: '/painting/multi-unit',
+    icon: SquareStack,
+    points: [
+      'Turns, corridors, hallways',
+      'Efficient scheduling for minimal downtime',
+      'Consistent quality across multiple units'
     ]
   }
 ]
+
+
 
 export default function ServicesOffered() {
   return (

@@ -1,11 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
-import ServicesMegaMenu from './navigation-megamenu'            // painting-focused menu
-import ProjectsMegaMenu from './navigation-projects-megamenu'   // new projects menu
+import ServicesMegaMenu from './navigation-megamenu'
+import ProjectsMegaMenu from './navigation-projects-megamenu'
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -27,7 +28,7 @@ export default function Navigation() {
         { label: 'Colour Consultation', to: '/painting/colour-consultation' },
         { label: 'Residential', to: '/painting/residential' },
         { label: 'Commercial', to: '/painting/commercial' },
-        { label: 'Multi‑Unit / PM', to: '/painting/multi-unit' },
+        { label: 'Multi-Unit / PM', to: '/painting/multi-unit' },
       ],
     },
     {
@@ -45,12 +46,22 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[var(--bg-100)] border-b border-[var(--border)]">
-      <div className="max-w-screen-xl mx-auto h-[64px] px-4 sm:px-6 flex items-center">
+    <div className="max-w-screen-xl mx-auto h-[100px] px-4 sm:px-6 flex items-center">
+
         {/* LEFT GROUP: logo + nav */}
         <div className="flex items-center gap-6">
-          <Link href="/" className="text-[var(--text-100)] font-semibold">
-            Classic Contracting
-          </Link>
+          {/* CHANGED: make logo taller so it’s readable */}
+<Link href="/" className="block h-full shrink-0">
+  <Image
+    src="/cclogo2.jpg"
+    alt="Classic Contracting Logo"
+    width={260}
+    height={90}
+    priority
+    
+  />
+</Link>
+
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
