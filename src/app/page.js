@@ -9,42 +9,84 @@ import ProjectsSection from "./components/projects/project-menu";
 import ProcessSection from "./components/whychooseus/our-process";
 import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
-
-
-
-export const metadata = {
-  title: 'Classic Renovations | Expert Painting & Finishing',
-  description:
-    'Classic Renovations specializes in professional painting and wall finishes, delivering flawless interiors and exteriors with a focus on quality, detail, and long-lasting results.',
-}
-
-
+import Script from 'next/script';
 
 export default function Home() {
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Classic Contracting",
+    url: "https://classicrenos.ca",
+    areaServed: { "@type": "AdministrativeArea", name: "Greater Toronto Area" },
+    description:
+      "Spec-accurate interior & exterior painting for condos, homes, and commercial spaces in Toronto & the GTA.",
+    telephone: "+1-437-555-5555",
+    email: "hello@classicrenos.ca",
+    sameAs: [
+      // add profiles if you have them
+      // "https://www.facebook.com/…", "https://www.instagram.com/…"
+    ]
+  };
+
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Classic Contracting",
+    url: "https://classicrenos.ca",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://classicrenos.ca/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
-<div>
-  <Navigation/>
-      <SectionBackground image="/Background-Images/bgimage1.jpg"  >
-      <HomeHero />
-      <TrustedBy/>
-      <HomeValueProp/>
-      </SectionBackground>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
-      <PaintingServices/>
-      <TestimonialsRow />
-      </SectionBackground>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
-      <WhyChooseUs/>
-      </SectionBackground>
-      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
-      <ProjectsSection/>
-      <ProcessSection/>
-      </SectionBackground>
+    <>
+      <header>
+        <Navigation />
+      </header>
+
+      <main id="main-content">
+        <SectionBackground image="/Background-Images/bgimage1.jpg">
+          <HomeHero />              {/* put the ONLY <h1> here */}
+          <TrustedBy />             {/* has id="trusted-by" inside now */}
+          <HomeValueProp />         {/* ensure this uses an <h2>, not <h1> */}
+        </SectionBackground>
+
+        <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
+          <PaintingServices />      {/* id="painting-services" */}
+          <TestimonialsRow />
+        </SectionBackground>
+
+        <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
+          <WhyChooseUs />           {/* id="why-choose-us" */}
+        </SectionBackground>
+
+        <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
+          <ProjectsSection />       {/* id="project-gallery" */}
+
+        </SectionBackground>
+                <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
       
+          <ProcessSection />        {/* id="process" */}
+        </SectionBackground>
+      </main>
 
-      <SiteFooter/>
-  
-</div>
+      <footer>
+        <SiteFooter />
+      </footer>
 
+      {/* Site-level JSON-LD */}
+      <Script
+        id="org-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <Script
+        id="website-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
+      />
+    </>
   );
 }

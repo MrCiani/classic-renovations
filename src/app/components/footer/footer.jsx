@@ -8,8 +8,8 @@ export default function SiteFooter({
   brand = 'Classic Contracting',
   phone = '+1 (437) 555-5555',
   phoneHref = 'tel:+14375555555',
-  email = 'hello@classicrenos.ca',
-  emailHref = 'mailto:hello@classicrenos.ca',
+  email = 'hello@classiccontracting.ca',
+  emailHref = 'mailto:hello@classiccontracting.ca',
   address = 'Greater Toronto Area, ON',
   logoSrc, // e.g. '/logo.svg'
 }) {

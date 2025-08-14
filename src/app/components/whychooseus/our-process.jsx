@@ -38,7 +38,7 @@ export default function ProcessSection() {
     <section
       id="process"
       aria-labelledby="process-title"
-      className="py-14 sm:py-16 bg-[var(--bg-100)]"
+      className="py-14 sm:py-16 "
     >
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Title */}
