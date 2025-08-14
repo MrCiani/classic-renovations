@@ -7,8 +7,8 @@ import { Home, Building2, Building, Factory } from 'lucide-react'
 
 const projectTypes = [
   { label: 'Homes',       href: '/projects/homes',       icon: <Home size={18} /> },
-  { label: 'Condos',      href: '/projects/condos',      icon: <Building2 size={18} /> },
-  { label: 'Apartments',  href: '/projects/apartments',  icon: <Building size={18} /> },
+  { label: 'Condos & Apartments',      href: '/projects/condos',      icon: <Building2 size={18} /> },
+  // { label: 'Apartments',  href: '/projects/apartments',  icon: <Building size={18} /> },
   { label: 'Commercial',  href: '/projects/commercial',  icon: <Factory size={18} /> },
 ]
 

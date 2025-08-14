@@ -4,23 +4,22 @@ import { useState, useRef, useEffect, useId } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import HeroCta from '../cta-folder/Call-to-action'
 import Link from 'next/link'
-import { Paintbrush, SprayCan, Sparkles, Layers, Home, Droplet, SquareStack, Palette, Brush } from 'lucide-react'
+import { Paintbrush, Home, Layers, SquareStack, Sparkles, Brush } from 'lucide-react'
 
+// Services: keep component refs, not JSX elements
 const paintingServices = [
-  { label: 'Interior Painting', href: '/painting/interior', icon: <Paintbrush size={18} />, desc: 'Walls, ceilings, trim, feature walls' },
-  { label: 'Exterior Painting', href: '/painting/exterior', icon: <Home size={18} />, desc: 'Siding, brick, stucco, soffits' },
-  { label: 'Cabinet Refinishing', href: '/painting/cabinets', icon: <Sparkles size={18} />, desc: 'Kitchen & vanity spraying' },
-  { label: 'Trim & Doors', href: '/painting/trim-doors', icon: <Layers size={18} />, desc: 'Baseboards, casings, doors, rails' },
-  { label: 'Drywall & Patching', href: '/painting/drywall', icon: <SquareStack size={18} />, desc: 'Repairs, skim coat, texture removal' },
-  { label: 'Deck & Fence Staining', href: '/painting/deck-fence-staining', icon: <Droplet size={18} />, desc: 'Transparent to solid stains' },
-  { label: 'Spray Finishes', href: '/painting/spray-finishes', icon: <SprayCan size={18} />, desc: 'Airless & HVLP flawless coats' },
-  { label: 'Colour Consultation', href: '/painting/colour-consultation', icon: <Palette size={18} />, desc: 'Palettes, samples, coordination' },
+  { label: 'Interior Painting', href: '/painting/interior', icon: Paintbrush, desc: 'Walls, ceilings, trim, feature walls' },
+  { label: 'Exterior Painting', href: '/painting/exterior', icon: Home, desc: 'Siding, brick, stucco, soffits' },
+  { label: 'Commercial', href: '/painting/commercial', icon: Layers, desc: 'Retail, offices, common areas' },
+  { label: 'Multi-Unit / PM', href: '/painting/multi-unit', icon: SquareStack, desc: 'Turns, corridors, hallways' },
+  { label: 'Cabinet Refinishing', href: '/painting/cabinets', icon: Sparkles, desc: 'Kitchen & vanity spraying, factory‑smooth finish' },
 ]
 
+// Optional: audiences also as component refs (if you use them here later)
 const paintingAudiences = [
-  { label: 'Residential', href: '/painting/residential', icon: <Paintbrush size={16} />, desc: 'Condos, homes, apartments' },
-  { label: 'Commercial', href: '/painting/commercial', icon: <Layers size={16} />, desc: 'Retail, offices, common areas' },
-  { label: 'Multi‑Unit / PM', href: '/painting/multi-unit', icon: <SquareStack size={16} />, desc: 'Turns, corridors, hallways' },
+  { label: 'Residential', href: '/painting/residential', icon: Paintbrush, desc: 'Condos, homes, apartments' },
+  { label: 'Commercial', href: '/painting/commercial', icon: Layers, desc: 'Retail, offices, common areas' },
+  { label: 'Multi‑Unit / PM', href: '/painting/multi-unit', icon: SquareStack, desc: 'Turns, corridors, hallways' },
 ]
 
 export default function ServicesMegaMenu() {
@@ -105,7 +104,7 @@ export default function ServicesMegaMenu() {
             </div>
 
             <div className="grid grid-cols-2 gap-2">
-              {paintingServices.map(({ label, href, icon, desc }) => (
+              {paintingServices.map(({ label, href, icon: Icon, desc }) => (
                 <Link
                   key={label}
                   href={href}
@@ -118,15 +117,15 @@ export default function ServicesMegaMenu() {
                 >
                   <span
                     className="
-                      mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-xl
-                      border border-[var(--border)] bg-white/70
+                      mt-0.5 inline-grid place-items-center h-9 w-9 aspect-square shrink-0
+                      rounded-xl border border-[var(--border)] bg-white/70
                     "
-                    style={{ color: 'var(--primary-100)' }}
                     aria-hidden
                   >
-                    {icon}
+                    <Icon className="w-5 h-5 text-[var(--primary-100)]" />
                   </span>
-                  <div className="text-sm">
+
+                  <div className="text-sm min-w-0">
                     <p className="font-semibold text-[var(--text-100)] group-hover:text-[var(--primary-100)]">
                       {label}
                     </p>
@@ -152,9 +151,10 @@ export default function ServicesMegaMenu() {
               style={{ opacity: 0.2, background: 'radial-gradient(circle at center, var(--primary-100), transparent 60%)' }}
               aria-hidden
             />
+
             <div className="relative">
               <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--primary-100)]">
-                <Brush size={14} />
+                <Brush className="w-3.5 h-3.5" />
                 Premium Finishes
               </div>
               <h3 className="mt-2 text-base font-semibold text-[var(--text-100)]">
@@ -168,17 +168,7 @@ export default function ServicesMegaMenu() {
             </div>
 
             <div className="relative mt-4 flex flex-col">
-              <HeroCta buttontext='Get a Quote'  bgColor = "var(--primary-100)"
-  textColor = 'white'/>
-              {/* <Link
-                href="/contact"
-                className="
-                  inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium
-                  bg-[var(--primary-200)] text-white hover:opacity-90 transition
-                "
-              >
-                Get a free quote
-              </Link> */}
+              <HeroCta buttontext="Get a Quote" bgColor="var(--primary-100)" textColor="white" />
               <p className="mt-2 text-[11px] text-[var(--text-200)]">
                 Serving condos, rentals, and commercial units across the GTA.
               </p>

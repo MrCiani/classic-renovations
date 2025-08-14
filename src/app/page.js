@@ -4,6 +4,9 @@ import TrustedBy from "./components/trustedbadges-testimonials/trusted-business"
 import PaintingServices from "./components/Services-offered/Services";
 import TestimonialsRow from "./components/trustedbadges-testimonials/TestimonialsShowcase";
 import WhyChooseUs from "./components/whychooseus/why-choose-us";
+import HomeValueProp from "./components/value-props/home-valueprop";
+import ProjectsSection from "./components/projects/project-menu";
+import ProcessSection from "./components/whychooseus/our-process";
 import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
 
@@ -22,14 +25,21 @@ export default function Home() {
 <div>
   <Navigation/>
       <SectionBackground image="/Background-Images/bgimage1.jpg"  >
-        <HomeHero />
-        <TrustedBy/>
+      <HomeHero />
+      <TrustedBy/>
+      <HomeValueProp/>
       </SectionBackground>
       <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
-          <PaintingServices/>
-          <TestimonialsRow />
+      <PaintingServices/>
+      <TestimonialsRow />
       </SectionBackground>
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
       <WhyChooseUs/>
+      </SectionBackground>
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
+      <ProjectsSection/>
+      <ProcessSection/>
+      </SectionBackground>
       
 
       <SiteFooter/>
