@@ -46,7 +46,7 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[var(--bg-100)] border-b border-[var(--border)]">
-    <div className="max-w-screen-xl mx-auto h-[100px] px-4 sm:px-6 flex items-center">
+    <div className="max-w-screen-xl mx-auto h-[80px] px-4 sm:px-6 flex items-center">
 
         {/* LEFT GROUP: logo + nav */}
         <div className="flex items-center gap-6">
@@ -64,7 +64,7 @@ export default function Navigation() {
 
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-6 text-md font-medium">
             {navlink.map(link => {
               const groupActive =
                 (link.children && link.children.some(c => pathname.startsWith(c.to))) ||

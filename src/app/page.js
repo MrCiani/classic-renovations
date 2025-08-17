@@ -5,7 +5,7 @@ import PaintingServices from "./components/Services-offered/Services";
 import TestimonialsRow from "./components/trustedbadges-testimonials/TestimonialsShowcase";
 import WhyChooseUs from "./components/whychooseus/why-choose-us";
 import HomeValueProp from "./components/value-props/home-valueprop";
-import ProjectsSection from "./components/projects/project-menu";
+import ProjectsSection from "./components/projects-menu/project-menu";
 import ProcessSection from "./components/whychooseus/our-process";
 import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
@@ -32,7 +32,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Classic Contracting",
-    url: "https://classicrenos.ca",
+    url: "https://classic-contracting.ca",
     potentialAction: {
       "@type": "SearchAction",
       target: "https://classicrenos.ca/search?q={search_term_string}",
@@ -42,14 +42,16 @@ export default function Home() {
 
   return (
     <>
-      <header>
-        <Navigation />
-      </header>
+      {/* <header>
+        
+      </header> */}
+
+      <Navigation />
 
       <main id="main-content">
         <SectionBackground image="/Background-Images/bgimage1.jpg">
           <HomeHero />              {/* put the ONLY <h1> here */}
-          <TrustedBy />             has id="trusted-by" inside now
+          <TrustedBy />            
           <HomeValueProp />         {/* ensure this uses an <h2>, not <h1> */}
         </SectionBackground>
 

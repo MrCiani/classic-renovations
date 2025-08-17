@@ -69,7 +69,7 @@ export default function ProjectsSection() {
                 href="/project-gallery/homes"
                 className="inline-block w-full sm:w-auto text-center bg-[var(--primary-100)] px-5 sm:px-6 py-3 rounded-xl hover:bg-[var(--primary-200)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-200)] transition"
               >
-                <span className="text-white">View Gallery</span>
+                <span className="text-white">learn more</span>
               </Link>
             </div>
           </div>
@@ -112,10 +112,10 @@ export default function ProjectsSection() {
                 </li>
               </ul>
               <Link
-                href="/project-gallery/condos-apartments"
+                href="/projects/condos"
                 className="inline-block w-full sm:w-auto text-center bg-[var(--primary-100)] px-5 sm:px-6 py-3 rounded-xl hover:bg-[var(--primary-200)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-200)] transition"
               >
-                <span className="text-white">View Gallery</span>
+                <span className="text-white">learn more</span>
               </Link>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function ProjectsSection() {
                 href="/project-gallery/commercial"
                 className="inline-block w-full sm:w-auto text-center bg-[var(--primary-100)] px-5 sm:px-6 py-3 rounded-xl hover:bg-[var(--primary-200)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-200)] transition"
               >
-                <span className="text-white">View Gallery</span>
+                <span className="text-white">learn more</span>
               </Link>
             </div>
           </div>

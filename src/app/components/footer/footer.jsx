@@ -10,7 +10,7 @@ export default function SiteFooter({
   phoneHref = 'tel:+14375555555',
   email = 'hello@classiccontracting.ca',
   emailHref = 'mailto:hello@classiccontracting.ca',
-  address = 'Greater Toronto Area, ON',
+  address = '205 - 1100 Finch Ave W, North York, ON M3J 2E2',
   logoSrc, // e.g. '/logo.svg'
 }) {
   const year = new Date().getFullYear();
@@ -90,10 +90,10 @@ export default function SiteFooter({
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-white" />
-                <a href={emailHref} className="hover:text-white">{email}</a>
+                <a href={emailHref} className="hover:text-white">{email} </a>
               </li>
               <li className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-white" />
+                <MapPin className="h-8 w-8 text-white" />
                 <span>{address}</span>
               </li>
             </ul>
