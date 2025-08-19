@@ -83,7 +83,25 @@ const CONDO_PROJECTS = [
     "Doors and trim – scuff-resistant enamel",
   ],
   galleryHref: "/gallery/venvi-birkdale",
+},
+{
+  id: "greenlife-golden",
+  title: "Greenlife Golden Condos – Common Areas & Suites",
+  location: "Markham, ON",
+  year: 2025,
+  logoSrc: "/trusted-badges/trust5.jpg", // swap this to the actual Greenlife logo in your assets
+  heroImage: "/condoca/hero.jpg", // place your hero image here
+  description:
+    "Full repaint and finishing work for suites and shared spaces at Greenlife Golden Condos.",
+  website: "https://condos.ca/markham/greenlife-golden-7400-markham-rd",
+  workCompleted: [
+    "Suite interiors repaint",
+    "Hallways and amenity areas refresh",
+    "Baseboards, doors, and trim refinished",
+  ],
+  galleryHref: "/gallery/condoca",
 }
+
 
 
 ];

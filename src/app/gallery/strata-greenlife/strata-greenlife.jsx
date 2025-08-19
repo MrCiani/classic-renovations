@@ -25,6 +25,8 @@ const IMAGES = [
     src: '/strata/photo5.jpg',
     alt: 'Condo lobby entrance with freshly painted light walls, crisp wainscoting trim and welcoming seating zone'
   },
+   { src: '/strata/photo6.jpg', 
+    alt: 'Amenity lounge or common room with painted wall surfaces and baseboards' },
 ];
 
 

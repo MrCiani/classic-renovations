@@ -1,29 +1,28 @@
-// pages/homes.jsx
+// pages/commercial.jsx
 import React from "react";
 import { Check } from "lucide-react";
 
-const HOME_PROJECTS = [
-{
-  id: "oakville-home",
-  title: "Residential Interiors",
-  location: "Oakville, ON",
-  year: 2025,
-  logoSrc: "/trusted-badges/trust3.png",
-  heroImage: "/houseful/hero.jpg",
-  description:
-    "Full interior repaint project completed for Houseful, featuring low-VOC finishes and modern detailing.",
-  website: "https://www.houseful.ca/",
-  workCompleted: [
-    "Interior walls repainted throughout",
-    "Trim and feature walls updated",
-    "Doors and frames refinished with durable coatings",
-  ],
-  galleryHref: "/gallery/houseful",
-}
-
+const COMMERCIAL_PROJECTS = [
+  {
+    id: "office-renovation",
+    title: "Office Interiors",
+    location: "Toronto, ON",
+    year: 2025,
+    logoSrc: "/trusted-badges/trust3.png",
+    heroImage: "/commercial/hero.jpg",
+    description:
+      "Comprehensive commercial repaint project completed for Houseful, featuring durable low-VOC finishes across office spaces, meeting rooms, and shared areas.",
+    // website: "https://www.houseful.ca/",
+    workCompleted: [
+      "Walls and partitions repainted throughout",
+      "Trim, baseboards, and feature walls updated",
+      "Doors and frames refinished with scuff-resistant coatings",
+    ],
+    galleryHref: "/gallery/houseful",
+  },
 ];
 
-function HomeProjectCard({ p }) {
+function CommercialProjectCard({ p }) {
   return (
     <article className="grid lg:grid-cols-2 gap-8 rounded-3xl border border-[var(--bg-300)] bg-white p-6 lg:p-8 shadow-sm">
       {/* Left: hero image + logo */}
@@ -62,14 +61,10 @@ function HomeProjectCard({ p }) {
           <p className="text-[var(--text-200)] mb-4 leading-relaxed">{p.description}</p>
         )}
 
-        {/* Website link (optional for homes) */}
+        {/* Website link (optional) */}
         {p.website && (
           <div className="mb-6">
-            <a
-              href={p.website}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={p.website} target="_blank" rel="noopener noreferrer">
               <span className="text-[var(--primary-100)] underline hover:text-[var(--primary-200)]">
                 Visit Project Website
               </span>
@@ -105,22 +100,21 @@ function HomeProjectCard({ p }) {
   );
 }
 
-export default function HomesPage() {
+export default function CommercialPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 lg:px-6 py-10">
       <header className="mb-8">
         <h1 className="text-3xl lg:text-4xl font-extrabold text-[var(--primary-100)]">
-          Homes & Residences
+          Commercial Projects
         </h1>
         <p className="text-[var(--text-200)] mt-2">
-          Recent home painting projects across the GTA—organized with a simple,
-          visual layout.
+          Recent commercial painting projects across the GTA—highlighting interiors, exteriors, and high-traffic workspaces.
         </p>
       </header>
 
       <section className="space-y-8">
-        {HOME_PROJECTS.map((p) => (
-          <HomeProjectCard key={p.id} p={p} />
+        {COMMERCIAL_PROJECTS.map((p) => (
+          <CommercialProjectCard key={p.id} p={p} />
         ))}
       </section>
     </main>

@@ -5,23 +5,35 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const IMAGES = [
-  { src: '/houseful/photo1.jpg', alt: 'Houseful light-filled living room with freshly painted neutral walls and accent wall detail' },
-  { src: '/houseful/photo2.jpg', alt: 'Houseful Modern entry and living space with newly painted walls and clean trim lines' },
-  { src: '/houseful/photo3.jpg', alt: 'Houseful Open-concept interior with soft painted walls, white trims, and welcoming design' },
-  { src: '/houseful/photo4.jpg', alt: 'Houseful elegant room with painted walls and white trim around fireplace and windows' },
-  { src: '/houseful/photo5.jpg', alt: 'Houseful living area featuring a painted gray accent wall, white trim, and stylish staging' },
-  { src: '/houseful/photo6.jpg', alt: 'Bright painted dining room with seamless wall and trim paintwork'},
-    {
-    src: '/houseful/photo7.jpg',
-    alt: 'Freshly painted hallway walls, ceiling, and baseboards'
+  {
+    src: '/condoca/photo1.jpg',
+    alt: 'Bright living area with freshly painted walls and trim'
   },
   {
-    src: '/houseful/photo8.jpg',
-    alt: 'Neutral-toned interior showing painted trims and feature wall'
-  }
+    src: '/condoca/photo2.jpg',
+    alt: 'Staged living room with clean painted surfaces and detail trim'
+  },
+  {
+    src: '/condoca/photo3.jpg',
+    alt: 'Open suite area with neutral painted walls and crisp trims'
+  },
+  {
+    src: '/condoca/photo4.jpg',
+    alt: 'Dining or living space with even painted wall finishes and natural light'
+  },
+    {
+    src: '/condoca/photo5.jpg',
+    alt: 'Open lobby with neutral painted walls and crisp trims'
+  },
+  ,
+    {
+    src: '/condoca/photo6.jpg',
+    alt: 'Dining/living space with even wall paint and natural light'
+  },
 ];
 
-export default function HousefulGallery() {
+
+export default function GreenlifeGolden() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -29,12 +41,16 @@ export default function HousefulGallery() {
   const deltaX = useRef(0);
   const isSwiping = useRef(false);
 
-  const openAt = (i) => { setIndex(i); setOpen(true); };
+  const openAt = (i) => {
+    setIndex(i);
+    setOpen(true);
+  };
+
   const close = useCallback(() => setOpen(false), []);
   const prev = useCallback(() => setIndex((i) => (i - 1 + IMAGES.length) % IMAGES.length), []);
   const next = useCallback(() => setIndex((i) => (i + 1) % IMAGES.length), []);
 
-  // keyboard + scroll lock
+  // keyboard controls + scroll lock
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => {
@@ -51,7 +67,7 @@ export default function HousefulGallery() {
     };
   }, [open, close, prev, next]);
 
-  // touch swipe handlers
+  // touch handlers (swipe left/right)
   const onTouchStart = (e) => {
     if (!open) return;
     const touch = e.touches[0];
@@ -65,15 +81,19 @@ export default function HousefulGallery() {
     const touch = e.touches[0];
     deltaX.current = touch.clientX - startX.current;
 
-    // guard to avoid passive-listener warnings
-    if (Math.abs(deltaX.current) > 8 && e.cancelable) e.preventDefault();
+    if (Math.abs(deltaX.current) > 8 && e.cancelable) {
+      e.preventDefault();
+    }
   };
 
   const onTouchEnd = () => {
     if (!isSwiping.current) return;
-    const threshold = 50;
-    if (deltaX.current <= -threshold) next();
-    else if (deltaX.current >= threshold) prev();
+    const threshold = 50; // px to trigger swipe
+    if (deltaX.current <= -threshold) {
+      next();
+    } else if (deltaX.current >= threshold) {
+      prev();
+    }
     isSwiping.current = false;
     deltaX.current = 0;
   };
@@ -81,31 +101,31 @@ export default function HousefulGallery() {
   return (
     <>
       <Head>
-        <title>Houseful Homes — Gallery | Classic Contracting</title>
+        <title>Greenlife Golden Condos – Gallery | Classic Contracting</title>
         <meta
           name="description"
-          content="Houseful Homes painting gallery: residential interiors, exteriors, kitchens, bedrooms, and hallways with fresh wall and trim finishes."
+          content="Photos from Greenlife Golden Condos: common areas, suites, and amenities repainted by Classic Contracting."
         />
       </Head>
 
       <main className="mx-auto max-w-6xl px-4 lg:px-6 py-10">
-        {/* Breadcrumb */}
+        {/* Breadcrumb / back link */}
         <div className="mb-6">
           <Link
-            href="/projects/homes"
-            className="text-[var(--primary-100)] underline hover:text-[var(--primary-200)] cursor-pointer"
+            href="/projects/condos"
+            className="text-[var(--primary-100)] underline hover:text-[var(--primary-200)]"
           >
-            ← Back to Homes
+            ← Back to Condos & Apartments
           </Link>
         </div>
 
         {/* Heading */}
         <header className="mb-6">
           <h1 className="text-3xl lg:text-4xl font-extrabold text-[var(--text-100)]">
-            Houseful Homes — Gallery
+            Greenlife Golden Condos — Gallery
           </h1>
           <p className="text-[var(--text-200)] mt-2">
-            Residential projects • Interiors, exteriors &amp; full repaints
+            Markham, ON • Suites &amp; common areas repaint
           </p>
         </header>
 
@@ -136,7 +156,7 @@ export default function HousefulGallery() {
         </section>
       </main>
 
-      {/* Lightbox */}
+      {/* Lightbox (swipe enabled) */}
       {open && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm"
@@ -170,24 +190,25 @@ export default function HousefulGallery() {
                 {IMAGES[index].alt}
               </figcaption>
 
+              {/* Controls */}
               <button
                 onClick={close}
                 aria-label="Close"
-                className="absolute cursor-pointer right-2 top-20 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-[var(--text-100)] shadow hover:bg-white"
+                className="absolute right-2 top-2 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-[var(--text-100)] shadow hover:bg-white"
               >
                 Close
               </button>
               <button
                 onClick={prev}
                 aria-label="Previous image"
-                className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-[var(--text-100)] shadow hover:bg-white"
+                className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-[var(--text-100)] shadow hover:bg-white"
               >
                 ‹
               </button>
               <button
                 onClick={next}
                 aria-label="Next image"
-                className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-[var(--text-100)] shadow hover:bg-white"
+                className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold text-[var(--text-100)] shadow hover:bg-white"
               >
                 ›
               </button>
