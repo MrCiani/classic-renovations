@@ -4,21 +4,21 @@ import { Check } from "lucide-react";
 
 const COMMERCIAL_PROJECTS = [
   {
-    id: "office-renovation",
-    title: "Office Interiors",
+    id: "Commercial-renovation",
+    title: "Development Consulting Firm",
     location: "Toronto, ON",
     year: 2025,
-    logoSrc: "/trusted-badges/trust3.png",
-    heroImage: "/commercial/hero.jpg",
+    logoSrc: "/strategy4/logo.jpg",
+    heroImage: "/strategy4/hero.jpg",
     description:
       "Comprehensive commercial repaint project completed for Houseful, featuring durable low-VOC finishes across office spaces, meeting rooms, and shared areas.",
-    // website: "https://www.houseful.ca/",
+    website: "https://www.strategy4.ca/projects-interior.php",
     workCompleted: [
       "Walls and partitions repainted throughout",
       "Trim, baseboards, and feature walls updated",
       "Doors and frames refinished with scuff-resistant coatings",
     ],
-    galleryHref: "/gallery/houseful",
+    galleryHref: "/gallery/strategy4",
   },
 ];
 

@@ -18,8 +18,8 @@ export default function Navigation() {
       id: 2,
       title: 'Painting',
       children: [
-        { label: 'Interior Painting', to: '/painting/interior' },
-        { label: 'Exterior Painting', to: '/painting/exterior' },
+        { label: 'Interior Painting', to: '/services/interior' },
+        { label: 'Exterior Painting', to: '/services/exterior' },
         // { label: 'Cabinet Refinishing', to: '/painting/cabinets' },
         // { label: 'Trim & Doors', to: '/painting/trim-doors' },
         // { label: 'Drywall & Patching', to: '/painting/drywall' },

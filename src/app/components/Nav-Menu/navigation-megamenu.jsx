@@ -8,7 +8,7 @@ import { Paintbrush, Home, Layers, SquareStack, Sparkles, Brush } from 'lucide-r
 
 // Services: keep component refs, not JSX elements
 const paintingServices = [
-  { label: 'Interior Painting', href: '/painting/interior', icon: Paintbrush, desc: 'Walls, ceilings, trim, feature walls' },
+  { label: 'Interior Painting', href: '/services/interior', icon: Paintbrush, desc: 'Walls, ceilings, trim, feature walls' },
   { label: 'Exterior Painting', href: '/painting/exterior', icon: Home, desc: 'Siding, brick, stucco, soffits' },
   { label: 'Commercial', href: '/painting/commercial', icon: Layers, desc: 'Retail, offices, common areas' },
   { label: 'Multi-Unit / PM', href: '/painting/multi-unit', icon: SquareStack, desc: 'Turns, corridors, hallways' },

@@ -6,7 +6,7 @@ const HOME_PROJECTS = [
 {
   id: "oakville-home",
   title: "Residential Interiors",
-  location: "Oakville, ON",
+  location: "GTA, ON",
   year: 2025,
   logoSrc: "/trusted-badges/trust3.png",
   heroImage: "/houseful/hero.jpg",
