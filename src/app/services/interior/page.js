@@ -109,7 +109,9 @@ export default function InteriorServicePage() {
           <HeroInterior />
           <InteriorServices/>
         </SectionBackground>
+        <SectionBackground image="/Background-Images/bgimage1.jpg">
         <TrustTestimonials/>
+        </SectionBackground>
       </main>
 
       <SiteFooter />
