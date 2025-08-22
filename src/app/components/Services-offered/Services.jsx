@@ -12,7 +12,7 @@ const services = [
   {
     title: 'Interior Painting',
     image: '/Service-Images/interior.jpg',
-    path: '/painting/interior',
+    path: '/services/interior',
     icon: Paintbrush,
     points: [
       'Walls, ceilings, trim, feature walls',

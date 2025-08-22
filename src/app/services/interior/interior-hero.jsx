@@ -51,12 +51,7 @@ export default function HeroInterior() {
             {/* CTAs */}
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <HeroCta buttontext="Contact us now!" />
-              <Link
-                href="/projects/interior"
-                className="rounded-2xl border border-[var(--bg-300)] bg-white px-5 py-3 text-sm font-semibold text-[var(--text-100)] hover:bg-[var(--bg-200)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-100)]"
-              >
-                See Interior Projects
-              </Link>
+ 
             </div>
 
             {/* Trust row */}

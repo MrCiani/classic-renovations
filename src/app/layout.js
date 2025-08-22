@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import CallNowButton from './components/callnow'
 import './globals.css'
 
 const inter = Inter({
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} antialiased min-h-screen overflow-x-clip bg-[var(--bg-100)] text-[var(--text-100)]`}
       >
         {children}
+        <CallNowButton/>
       </body>
     </html>
   )
