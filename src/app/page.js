@@ -8,6 +8,7 @@ import TestimonialsRow from "./components/trustedbadges-testimonials/Testimonial
 import WhyChooseUs from "./components/whychooseus/why-choose-us";
 import HomeValueProp from "./components/value-props/home-valueprop";
 import ProjectsSection from "./components/projects-menu/project-menu";
+import ServiceAreaHero from "./components/service-area/ServiceAreasMapRegions";
 import ProcessSection from "./components/whychooseus/our-process";
 import SiteFooter from "./components/footer/footer";
 import SectionBackground from "./components/Image-Background";
@@ -133,6 +134,7 @@ export default function Home() {
         {/* Visual proof next */}
         <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
           <ProjectsSection />
+          <ServiceAreaHero/>
         </SectionBackground>
 
         <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>

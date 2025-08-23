@@ -68,22 +68,26 @@ function TrustedLogos({ items = [], compact = false }) {
 
 function Testimonial({ quote, name, role, avatar, rating = 5 }) {
   return (
-    <li className="relative rounded-3xl border border-[var(--bg-300)] bg-white p-6 shadow-sm">
-      <p className="text-[var(--text-100)]">“{quote}”</p>
+    <li className="relative flex flex-col justify-between rounded-3xl border border-[var(--bg-300)] bg-white p-6 shadow-sm h-full">
+      {/* Top content */}
+      <div>
+        <p className="text-[var(--text-100)]">“{quote}”</p>
 
-      {/* Stars */}
-      <div className="mt-3 flex gap-1 text-yellow-400">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star
-            key={i}
-            className={`h-4 w-4 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-          />
-        ))}
+        {/* Stars */}
+        <div className="mt-3 flex gap-1 text-yellow-400">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className={`h-4 w-4 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="mt-4 flex items-center gap-3">
+      {/* Bottom content (avatar + name/role) */}
+      <div className="mt-6 flex items-center gap-3">
         {avatar ? (
-          <div className="h-9 w-9 overflow-hidden rounded-full border border-[var(--bg-300)]">
+          <div className="h-12 w-12 overflow-hidden rounded-full border border-[var(--bg-300)]">
             <Image
               src={`/avatars/${avatar}`}
               alt={`${name} avatar`}

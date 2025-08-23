@@ -11,117 +11,118 @@ import {
   Brush,
   ShieldCheck,
   Wind,
+  Droplets,
   ChevronDown,
 } from 'lucide-react';
 import HeroCta2 from '@/app/components/cta-folder/call-to-action2';
 
 const SERVICES = [
   {
-    title: 'Walls & Ceilings',
+    title: 'Siding & Trim',
     icon: Paintbrush,
     items: [
-      'Smooth, uniform coverage',
-      'Crisp cut lines at ceilings',
-      'Accent walls & feature colours',
-      'Low/zero-VOC options',
-      'Matte to semi-gloss sheens',
+      'Spray & back-roll for even coverage',
+      'Crisp lines at soffits & fascias',
+      'Wood, aluminum & vinyl substrates',
+      'Colour updates & sheen matching',
+      'Low/zero-VOC exterior acrylics',
     ],
   },
   {
-    title: 'Doors, Frames & Trim',
+    title: 'Doors & Garage Doors',
     icon: DoorClosed,
     items: [
-      'Scuff-resistant enamels',
-      'Metal & wood frames',
-      'Baseboards, casings, chair rails',
-      'Spray, brush, or rolled finishes',
-      'Uniform sheen control',
+      'Smooth, durable enamel finishes',
+      'Proper de-gloss & adhesion prime',
+      'Weather-rated urethane/acrylic',
+      'Brush, roll or fine-finish spray',
+      'Hardware masked & protected',
     ],
   },
   {
-    title: 'Corridors & Reception',
+    title: 'Stucco, Brick & Masonry',
     icon: PanelsTopLeft,
     items: [
-      'Washable high-durability coatings',
-      'Corner/edge protection touch-ups',
-      'Wayfinding & subtle accents',
-      'Night & weekend scheduling',
-      'Minimal disruption to staff/tenants',
+      'Elastomeric systems for hairline cracks',
+      'Mineral/masonry primers & sealers',
+      'Limewash & breathable coatings',
+      'Efflorescence treatment as needed',
+      'Uniform colour & texture control',
     ],
   },
   {
-    title: 'Suites & Offices',
+    title: 'Decks, Fences & Railings',
     icon: SquareStack,
     items: [
-      'Full unit/office turnovers',
-      'Boardrooms & meeting spaces',
-      'Colour standardization',
-      'Punch-list closeout',
-      'Before/after documentation',
+      'Transparent, semi-transparent & solid stains',
+      'Back-brush for penetration & uniformity',
+      'Rust-inhibitive primers on metal',
+      'UV & moisture-resistant systems',
+      'Seasonal maintenance programs',
     ],
   },
   {
-    title: 'Prep & Repairs',
+    title: 'Prep & Exterior Repairs',
     icon: Ruler,
     items: [
-      'Drywall patching & skim coats',
-      'Feathered sanding & spot prime',
-      'Caulking & gap filling',
-      'Stain blocking & odour sealers',
-      'Surface testing & adhesion checks',
+      'Power wash & surface decontamination',
+      'Scrape, sand, spot-prime bare areas',
+      'Caulking & gap filling at joints',
+      'Wood filler & minor carpentry fixes',
+      'Masking of windows, brick & landscaping',
     ],
   },
   {
     title: 'Staining & Clear Coats',
     icon: Brush,
     items: [
-      'Doors, handrails, and millwork',
-      'Oil-/water-based stains',
-      'Polyurethane & waterborne clears',
-      'Tone matching & samples',
-      'Fine‐finish spray options',
+      'Entry doors & natural wood accents',
+      'Oil-/water-based stains & toners',
+      'Polyurethane & exterior clears',
+      'Tone samples for approval',
+      'Fine-finish spray options',
     ],
   },
   {
     title: 'Specialty & Protective',
     icon: ShieldCheck,
     items: [
-      'Epoxy/urethane systems',
-      'Antimicrobial coatings',
-      'Moisture & abrasion resistance',
-      'Block fillers on masonry',
-      'Facility-safe specifications',
+      'High-build elastomerics',
+      'Anti-graffiti & sacrificial coats',
+      'Epoxy/urethane for high-wear areas',
+      'Moisture & corrosion resistance',
+      'Manufacturer-approved specs',
     ],
   },
   {
-    title: 'Air, Odour & Compliance',
+    title: 'Weather, Safety & Compliance',
     icon: Wind,
     items: [
-      'Low-odour, fast-cure products',
-      'Negative air & dust control',
-      'Site protection & clean containment',
-      'WSIB & insured crews',
-      'Safety & building rules adherence',
+      'Work within temp & wind windows',
+      'Rain delay protocols',
+      'Ladder/scaffold & fall protection',
+      'WSIB & liability insured crews',
+      'Neighbour & site protection',
     ],
   },
 ];
 
-export default function InteriorServicesMenu() {
+export default function ExteriorServicesMenu() {
   const [openIndex, setOpenIndex] = useState(0); // first item open on mobile
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
     <section
       className="relative overflow-hidden py-16 lg:py-20"
-      aria-label="Interior painting scopes and services"
+      aria-label="Exterior painting scopes and services"
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mb-10 text-center">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-100)]">
-            Professional <span className="text-[var(--primary-100)]">Interior Painting</span> Services
+            Professional <span className="text-[var(--primary-100)]">Exterior Painting</span> Services
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-[var(--text-200)] text-lg ">
-            From walls and trim to specialty coatings, Classic Contracting provides full-service interior painting solutions tailored to your space.
+          <p className="mt-3 max-w-2xl mx-auto text-[var(--text-200)] text-lg">
+            Clean prep, weather-rated coatings, and crisp, durable finishes for homes, condos, and multi-unit properties.
           </p>
         </header>
 
@@ -197,7 +198,7 @@ export default function InteriorServicesMenu() {
         </div>
 
         <div className="mt-14">
-          <HeroCta2 />
+          <HeroCta2 buttontext="Get Exterior Painting Estimate →" />
         </div>
       </div>
     </section>

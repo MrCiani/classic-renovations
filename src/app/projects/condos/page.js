@@ -14,13 +14,10 @@ export const metadata = {
 export default function CondosAndApartments() {
   return (
     <>
-      <header>
-        
-
-        <Navigation />
-      </header>
+  
 
       <main id="main-content">
+         <Navigation />
         {/* Optional background wrapper to match Home */}
 
         <SectionBackground image="/Background-Images/bgimage1.jpg">

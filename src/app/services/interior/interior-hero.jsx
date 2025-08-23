@@ -50,7 +50,7 @@ export default function HeroInterior() {
 
             {/* CTAs */}
             <div className="mt-7 flex flex-wrap items-center gap-3">
-              <HeroCta buttontext="Contact us now!" />
+              <HeroCta buttontext="Request a Proposal →" />
  
             </div>
 

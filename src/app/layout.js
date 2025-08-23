@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import CallNowButton from './components/callnow'
 import './globals.css'
+import 'leaflet/dist/leaflet.css';
+
 
 const inter = Inter({
   subsets: ['latin'],

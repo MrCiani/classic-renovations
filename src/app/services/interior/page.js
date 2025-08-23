@@ -154,14 +154,16 @@ export default function InteriorServicePage() {
           </SectionBackground>
           <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
           <WhatToExpectCC/>
+          
+          <ProjectHighlights/>
         </SectionBackground>
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
         
         <FAQSection/>
-        
+      
         </SectionBackground>
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
-        <ProjectHighlights/>
+        
         </SectionBackground>
         
       </main>
