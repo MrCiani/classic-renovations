@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import HeroCta2 from '@/app/components/cta-folder/call-to-action2';
 
-// ---- Scopes ----
+// ---- Commercial Scopes ----
 const SERVICES = [
   {
     title: 'Office Suites & Tenant Improvements',
@@ -98,8 +98,8 @@ const SERVICES = [
 ];
 
 export default function CommercialServicesMenu() {
-  const [openIndex, setOpenIndex] = useState(0);  // mobile
-  const [active, setActive] = useState(0);        // desktop
+  const [openIndex, setOpenIndex] = useState(0); // mobile: first open
+  const [active, setActive] = useState(0); // desktop: active tab
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
@@ -119,7 +119,7 @@ export default function CommercialServicesMenu() {
           </p>
         </header>
 
-        {/* Mobile: accordions */}
+        {/* Mobile: animated accordions */}
         <ul className="space-y-4 md:hidden">
           {SERVICES.map(({ title, items, icon: Icon }, i) => (
             <li
@@ -162,9 +162,9 @@ export default function CommercialServicesMenu() {
           ))}
         </ul>
 
-        {/* Desktop: side tabs with equal-height columns */}
+        {/* Desktop: Side tabs (equal-height columns) */}
         <div className="hidden md:grid md:grid-cols-12 gap-8 items-stretch">
-          {/* Left tabs column */}
+          {/* Tabs */}
           <aside className="md:col-span-5 lg:col-span-4">
             <div className="h-full rounded-3xl border border-[var(--bg-300)] bg-white p-2 shadow-sm flex flex-col">
               <ul className="flex-1">
@@ -174,7 +174,7 @@ export default function CommercialServicesMenu() {
                     <li key={title} className="p-1">
                       <button
                         onClick={() => setActive(i)}
-                        className={`w-full flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
+                        className={`w-full cursor-pointer flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
                           ${isActive
                             ? 'bg-[var(--primary-300)]/20 ring-1 ring-[var(--primary-200)]'
                             : 'hover:bg-[var(--bg-100)]'
@@ -195,11 +195,11 @@ export default function CommercialServicesMenu() {
             </div>
           </aside>
 
-          {/* Right detail panel */}
+          {/* Detail panel */}
           <section className="md:col-span-7 lg:col-span-8">
             <div className="h-full rounded-3xl border border-[var(--bg-300)] bg-white p-6 shadow-sm flex flex-col">
               <header className="mb-4 flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-100)] text-[var(--primary-100)]">
+                <span className="inline-flex h-10 w-10 items-center  justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-100)] text-[var(--primary-100)]">
                   {(() => {
                     const Icon = SERVICES[active].icon;
                     return <Icon className="h-5 w-5" />;
@@ -219,7 +219,6 @@ export default function CommercialServicesMenu() {
                 ))}
               </ul>
 
-              {/* Push CTA to bottom when content is short */}
               <div className="mt-6 md:mt-auto">
                 <HeroCta2 buttontext="Get Commercial Painting Estimate →" />
               </div>

@@ -23,6 +23,8 @@
   
   --hero-gradient: radial-gradient(1100px 520px at 10% -10%, rgba(0,91,153,.08), transparent 70%),
                    radial-gradient(900px 440px at 95% 0%, rgba(255,215,0,.10), transparent 65%);
+  --hero-gradient2: linear-gradient(135deg, #005B99 0%, #4e88ca 70%);
+              
 }
 
 

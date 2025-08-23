@@ -91,10 +91,23 @@ export default function HeroExterior() {
           </div>
 
           {/* Bottom-right stat container */}
-          <div className="relative rounded-2xl border border-gray-200 shadow bg-white p-6 flex flex-col justify-center h-40">
-            <p className="text-3xl font-bold text-[var(--primary-100)]">98%</p>
-            <p className="text-sm text-gray-600">Client satisfaction across 120+ exterior jobs</p>
-          </div>
+<div
+  style={{ background: "var(--hero-gradient2)" }}
+  className="relative rounded-2xl border items-center border-gray-200 shadow p-6 flex flex-col justify-center h-40"
+>
+  {/* Icon in top-right corner */}
+  {/* <img
+    src="/paint-can.svg"
+    alt="Paint can"
+    className="absolute top-3 right-3 w-8 h-8 opacity-80"
+  /> */}
+
+  {/* Stat content */}
+  <p className="text-4xl font-bold text-[var(--accent-100)]">98%</p>
+  <p className="text-sm text-white mb-2">Repeat & Referral clients</p>
+  <p className="text-sm text-white"> <span className="text-[var(--accent-100)]">⭐</span>4.9/5 rating.</p>
+</div>
+
         </motion.div>
       </div>
     </section>

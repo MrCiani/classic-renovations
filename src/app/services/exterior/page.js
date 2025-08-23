@@ -5,7 +5,7 @@ import SiteFooter from "@/app/components/footer/footer";
 import SectionBackground from "@/app/components/Image-Background";
 import ExteriorFAQSection from "./faq-exterior";               // ← exterior FAQ
 import ExteriorServicesMenu from "./exterior-services";     // ← exterior services grid/accordion
-import TrustSection from "@/app/components/whychooseus/TrustSection";
+import ExteriorTrustSection from "./exterior-trust";
 import ExteriorBentoHero from "./exterior-hero";            // ← exterior hero
 import ExteriorWhatToExpectCC from "./exterior-whattoexpect";
 import ExteriorBeforeAfter from "./beforeafter";
@@ -129,44 +129,10 @@ export default function ExteriorServicePage() {
         {/* HERO + TRUST */}
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={0.6}>
           <ExteriorBentoHero />
-          <TrustSection
-            variant="compact"
-            title="Trusted for Exterior Painting Across the GTA"
-            subtitle="Clean prep, weather-rated coatings, and crisp finishes for homes, condos, and multi-unit properties."
-              logos={[
-    { src: '/trusted-badges/trust3.png', alt: '25+ Years Interior Painting Experience' },
-  ]}
-            testimonials={[
-  {
-    headline: "Exterior refresh with zero disruption",
-    quote:
-      "Houseful’s property managers coordinated perfectly with our schedule. The siding and trim look brand new with crisp, clean lines.",
-    name: "Phillip M.",
-    role: "Houseful Property Manager",
-    avatar: "steven.jpg",
-    rating: 5,
-  },
-  {
-    headline: "Reliable partner for multi-unit projects",
-    quote:
-      "From stucco to railings, the crews delivered consistent quality across multiple units. Clear updates and tidy work every day.",
-    name: "Sandra C.",
-    role: "Houseful Project Manager",
-    avatar: "sandra.jpg",
-    rating: 5,
-  },
-  {
-    headline: "Professional building upgrades",
-    quote:
-      "Brick stain and soffit colour updates transformed our property. Houseful’s managers ensured everything was on schedule and stress-free.",
-    name: "Tyrell H.",
-    role: "Houseful Property & Project Managers",
-    avatar: "tyrell.jpg",
-    rating: 5,
-  },
-]}
 
-          />
+          <ExteriorTrustSection/>
+
+          
         </SectionBackground>
 
         {/* SERVICES */}
