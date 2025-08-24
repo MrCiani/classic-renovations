@@ -27,8 +27,8 @@ export default function Navigation() {
         // { label: 'Spray Finishes', to: '/painting/spray-finishes' },
         // { label: 'Colour Consultation', to: '/painting/colour-consultation' },
         // { label: 'Residential', to: '/painting/residential' },
-        { label: 'Commercial', to: '/painting/commercial' },
-        { label: 'Multi-Unit / PM', to: '/painting/multi-unit' },
+        { label: 'Commercial', to: '/services/commercial' },
+        { label: 'Multi-Unit / PM', to: '/services/multi-unit-pm' },
       ],
     },
     {

@@ -4,39 +4,39 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import HeroCta2 from '@/app/components/cta-folder/call-to-action2'
-import MultiUnitPMBeforeAfter from './beforeafter'
+// import MultiUnitPMBeforeAfter from './beforeafter'
 
 const PROJECTS = [
   {
-    src: '/multiunit/project1.jpg',
+    src: '/multiunit/photo1.jpg',
     alt: 'Suite turnover repaint with quick-dry systems',
     title: 'Suite Turnover Repaint',
     description:
       'Walls, ceilings, and trim refreshed between tenants — standardized colors and fast re-entry.',
   },
   {
-    src: '/multiunit/project2.jpg',
+    src: '/multiunit/photo2.jpg',
     alt: 'Residential condo corridor repaint',
     title: 'Condo Corridor Refresh',
     description:
       'Dust-controlled prep and durable, scuff-resistant coatings for high-traffic corridors.',
   },
   {
-    src: '/multiunit/project3.jpg',
+    src: '/multiunit/photo3.jpg',
     alt: 'Amenity space repaint',
     title: 'Amenity & Lobby Upgrade',
     description:
       'Modern finishes applied in amenity lounges and lobbies — minimal disruption to residents.',
   },
   {
-    src: '/multiunit/project4.jpg',
+    src: '/multiunit/photo4.jpg',
     alt: 'Stairwell repaint project',
     title: 'Stairwells & Service Areas',
     description:
       'Anti-slip coatings, numbering, and durable paints for safe, compliant common areas.',
   },
   {
-    src: '/multiunit/project5.jpg',
+    src: '/multiunit/photo5.jpg',
     alt: 'Retirement residence repaint',
     title: 'Senior Living Facility Repaint',
     description:
@@ -164,7 +164,7 @@ export default function MultiUnitPMProjectHighlights() {
                     )}
                   </figcaption>
                 )}
-                <div className="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/10 transition" />
+                <div className="pointer-events-none absolute inset-0 bg-black/0 transition" />
               </figure>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function MultiUnitPMProjectHighlights() {
             ))}
           </div>
         </div>
-        <MultiUnitPMBeforeAfter/>
+       
 
         <div className="mt-10 text-center">
           <HeroCta2

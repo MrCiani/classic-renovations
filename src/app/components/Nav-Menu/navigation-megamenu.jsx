@@ -72,7 +72,7 @@ export default function ServicesMegaMenu() {
     >
       <button
         type="button"
-        onClick={() => router.push('/painting')}
+        // onClick={() => router.push('/painting')}
         onFocus={handleMouseEnter}
         onKeyDown={handleKeyDown}
         aria-haspopup="menu"

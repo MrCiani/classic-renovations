@@ -8,7 +8,7 @@ import SectionBackground from "@/app/components/Image-Background";
 import MultiUnitPMFAQSection from "./faq-multi";           // <- create or point to your PM FAQ
 import MultiUnitPmServicesMenu from "./multi-services";       // export default matches earlier code
 import MultiUnitPMTrustSection from "./multi-trust";
-import HeroMultiUnitPM from "./multi-hero";
+import HeroClassicSplit from "./multi-hero";
 import MultiUnitPMWhatToExpectCC from "./multi-whattoexpect";
 import MultiUnitPMProjectHighlights from "./view-projects";
 import MultiUnitPMBeforeAfter from "./beforeafter";
@@ -137,7 +137,7 @@ export default function MultiUnitServicePage() {
 
         {/* HERO + TRUST */}
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={0.6}>
-          <HeroMultiUnitPM />
+          <HeroClassicSplit />
           <MultiUnitPMTrustSection />
         </SectionBackground>
 

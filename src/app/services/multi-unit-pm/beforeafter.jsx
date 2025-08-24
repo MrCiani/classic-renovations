@@ -5,16 +5,16 @@ import 'react-before-after-slider-component/dist/build.css'
 
 const CASES = [
   {
-    before: '/beforeafter/multiunit/suite-before.jpg',
-    after:  '/beforeafter/multiunit/suite-after.jpg',
+    before: '/beforeafter/multiunit/before1.jpg',
+    after:  '/beforeafter/multiunit/after1.jpg',
     title: 'Suite Turnover Repaint',
     caption: 'Walls, ceilings & trim refreshed between tenants — fast re-entry with standardized colors.',
   },
   {
-    before: '/beforeafter/multiunit/corridor-before.jpg',
-    after:  '/beforeafter/multiunit/corridor-after.jpg',
-    title: 'Condo Corridor Refresh',
-    caption: 'Dust-controlled prep and scuff-resistant eggshell for high-traffic hallways.',
+    before: '/beforeafter/multiunit/before2.jpg',
+    after:  '/beforeafter/multiunit/after2.jpg',
+    title: 'Hallway Before & After',
+    caption: 'A polished hallway update with added trim, fresh paint, and lighting—ideal for showcasing service-area improvements',
   },
   {
     before: '/beforeafter/multiunit/stairwell-before.jpg',
