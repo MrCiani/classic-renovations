@@ -7,7 +7,7 @@ import FAQSection from "./faq-interior";
 import InteriorServices from "./interior-services";
 import TrustSection from "@/app/components/whychooseus/TrustSection";
 import HeroInterior from "./interior-hero";
-import WhatToExpectCC from "@/app/components/whychooseus/whattoexpect";
+import InteriorWhatToExpectCC from "./interior-whattoexpect";
 import ProjectHighlights from "./view-projects";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
@@ -153,9 +153,10 @@ export default function InteriorServicePage() {
           <InteriorServices/>
           </SectionBackground>
           <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
-          <WhatToExpectCC/>
+          <InteriorWhatToExpectCC/>
           
           <ProjectHighlights/>
+   
         </SectionBackground>
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
         

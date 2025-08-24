@@ -24,7 +24,7 @@ const services = [
   {
     title: 'Exterior Painting',
     image: '/Service-Images/exterior.jpg',
-    path: '/painting/exterior',
+    path: '/services/exterior',
     icon: HomeIcon,
     points: [
       'Siding, brick, stucco, soffits',
@@ -36,7 +36,7 @@ const services = [
   {
     title: 'Commercial',
     image: '/Service-Images/commercial.jpg',
-    path: '/painting/commercial',
+    path: '/services/commercial',
     icon: Layers,
     points: [
       'Retail, offices, common areas',
@@ -48,7 +48,7 @@ const services = [
   {
     title: 'Multi-Unit / PM',
     image: '/Service-Images/multi-unit.jpg',
-    path: '/painting/multi-unit',
+    path: '/services/multi-unit-pm',
     icon: SquareStack,
     points: [
       'Turns, corridors, hallways',
@@ -60,7 +60,7 @@ const services = [
   {
     title: 'Cabinet Refinishing',
     image: '/Service-Images/cabinet.jpg',
-    path: '/painting/cabinets',
+    path: '/services/cabinets',
     icon: Paintbrush,
     points: [
       'Kitchen & vanity spraying',

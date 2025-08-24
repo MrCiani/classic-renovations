@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Phone, ShieldCheck, Clock3, Star } from 'lucide-react'
+import { Building2, ShieldCheck, Clock3, Star } from 'lucide-react'
 import HeroCta from '@/app/components/cta-folder/Call-to-action'
 
 const fade = (d = 0) => ({
@@ -126,14 +126,15 @@ export default function HeroCommercial() {
                 <Star className="h-4 w-4 text-yellow-400" />
                 4.9★ vendor rating
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1.5 text-sm text-[var(--text-100)] shadow-sm">
-                <Clock3 className="h-4 w-4 text-[var(--primary-100)]" />
-                After-hours & weekends
-              </span>
+ 
               <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1.5 text-sm text-[var(--text-100)] shadow-sm">
                 <ShieldCheck className="h-4 w-4 text-[var(--primary-100)]" />
                 WSIB Insured
               </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1.5 text-sm text-[var(--text-100)] shadow-sm">
+  <Building2 className="h-4 w-4 text-[var(--primary-100)]" />
+  Multi-Unit & Common Area Expertise
+</span>
             </div>
 
             {/* Primary CTA + secondary phone CTA */}

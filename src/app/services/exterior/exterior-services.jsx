@@ -97,7 +97,7 @@ const SERVICES = [
   // { title: 'Safety, Compliance & Scheduling', icon: Wind, items: [...] },
 ];
 
-export default function CommercialServicesMenu() {
+export default function ExteriorServicesMenu() {
   const [openIndex, setOpenIndex] = useState(0);  // mobile
   const [active, setActive] = useState(0);        // desktop
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);

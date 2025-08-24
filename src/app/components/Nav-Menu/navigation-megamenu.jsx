@@ -11,7 +11,7 @@ const paintingServices = [
   { label: 'Interior Painting', href: '/services/interior', icon: Paintbrush, desc: 'Walls, ceilings, trim, feature walls' },
   { label: 'Exterior Painting', href: '/services/exterior', icon: Home, desc: 'Siding, brick, stucco, soffits' },
   { label: 'Commercial', href: '/services/commercial', icon: Layers, desc: 'Retail, offices, common areas' },
-  { label: 'Multi-Unit / PM', href: '/services/multi-unit', icon: SquareStack, desc: 'Turns, corridors, hallways' },
+  { label: 'Multi-Unit / PM', href: '/services/multi-unit-pm', icon: SquareStack, desc: 'Turns, corridors, hallways' },
   { label: 'Cabinet Refinishing', href: '/services/cabinets', icon: Sparkles, desc: 'Kitchen & vanity spraying, factory‑smooth finish' },
 ]
 

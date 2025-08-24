@@ -3,27 +3,27 @@
 import Image from 'next/image'
 import { CheckCircle2, ShieldCheck, Wind, Clock } from 'lucide-react'
 
-export default function CommercialWhatToExpectCC() {
+export default function MultiUnitPMWhatToExpectCC() {
   const ITEMS = [
     {
       icon: Wind,
       title: 'Low-Odor, Fast-Cure Systems',
-      desc: 'Commercial-grade coatings specified for offices, retail, and multi-unit facilities — quick re-entry and clean turnovers.',
+      desc: 'Zero/low-VOC coatings for occupied buildings — quick re-entry and clean turnovers.',
     },
     {
       icon: CheckCircle2,
       title: 'Dust-Controlled Prep & Protection',
-      desc: 'Containment, floor/wall protection, and HEPA sanding to maintain a clean, safe worksite during business hours.',
+      desc: 'Containment, floor/wall protection, and HEPA sanding to keep corridors and suites spotless.',
     },
     {
       icon: ShieldCheck,
-      title: 'WSIB & Compliance',
-      desc: 'Full WSIB coverage, $2M liability, JSAs, site orientations, and documented safety procedures on every project.',
+      title: 'WSIB & PM Compliance',
+      desc: 'Full WSIB coverage, $2M liability, COI on request, and documented procedures on every site.',
     },
   ]
 
   return (
-    <section aria-label="What to expect from Classic Contracting (Commercial)" className="relative overflow-hidden">
+    <section aria-label="What to expect from Classic Contracting (Multi-Unit / PM)" className="relative overflow-hidden">
       {/* Soft pattern background */}
       <div
         aria-hidden="true"
@@ -39,7 +39,7 @@ export default function CommercialWhatToExpectCC() {
         <header className="text-center">
           <div className="mb-6 flex justify-center">
             <Image
-              src="/logo/cc-logo-f.svg"   // <-- replace with your actual logo path
+              src="/logo/cc-logo-f.svg"   // <-- update if your logo path differs
               alt="Classic Contracting Logo"
               width={120}
               height={36}
@@ -48,10 +48,11 @@ export default function CommercialWhatToExpectCC() {
             />
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-100)]">
-            What to Expect on Your Commercial Project
+            What to Expect on Your Multi-Unit / PM Project
           </h2>
           <p className="mt-3 text-[var(--text-200)] max-w-2xl mx-auto">
-            Clean, compliant, and on-schedule delivery — optimized for offices, retail, and multi-unit common areas.
+            Suite turnovers, corridors, stairwells, and amenity spaces — tenant-friendly scheduling, dust-controlled prep,
+            and standardized finishes with minimal disruption.
           </p>
         </header>
 
@@ -89,7 +90,7 @@ export default function CommercialWhatToExpectCC() {
             <ShieldCheck className="h-6 w-6 text-[var(--primary-100)]" /> Transparent Deadlines
           </span>
           <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white/80 px-3 py-1">
-            <CheckCircle2 className="h-6 w-6 text-[var(--primary-100)]" /> Night &amp; Weekend Scheduling
+            <CheckCircle2 className="h-6 w-6 text-[var(--primary-100)]" /> Tenant-Friendly Scheduling
           </span>
           <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white/80 px-3 py-1">
             <Clock className="h-6 w-6 text-[var(--primary-100)]" /> On-Schedule Delivery

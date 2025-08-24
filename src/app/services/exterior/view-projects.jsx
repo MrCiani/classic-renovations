@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import HeroCta2 from '@/app/components/cta-folder/call-to-action2';
+import ExteriorBeforeAfter from './beforeafter';
 
 const PROJECTS = [
   {
@@ -196,6 +197,7 @@ export default function ExteriorProjectHighlights() {
             ))}
           </div>
         </div>
+        <ExteriorBeforeAfter/>
 
         <div className="mt-10 text-center">
           <HeroCta2

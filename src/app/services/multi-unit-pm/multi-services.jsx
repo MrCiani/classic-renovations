@@ -5,120 +5,120 @@ import {
   Check,
   Paintbrush,
   DoorClosed,
+  PanelsTopLeft,
+  SquareStack,
   Ruler,
   Brush,
   ShieldCheck,
-  Sparkles,
-  Layers,
+  Wind,
   ChevronDown,
 } from 'lucide-react'
 import HeroCta2 from '@/app/components/cta-folder/call-to-action2'
 
-// ---- Interior Scopes ----
+// ---- Multi-Unit / PM Scopes ----
 const SERVICES = [
   {
-    title: 'Walls, Ceilings & Trim',
+    title: 'Suite Turnovers & Touch-Ups',
     icon: Paintbrush,
     items: [
-      'Clean lines with dust-controlled prep',
-      'Premium low-VOC paints for occupied spaces',
-      'Two-coat coverage with spot-prime as needed',
-      'Trim, baseboards, crown & casings',
-      'Colour matching and finish guidance',
+      'Low-odor, fast-cure systems for quick re-entry',
+      'Standardized color packages across units',
+      'Walls/ceilings/trim + door & frame touch-ups',
+      'Punch-list closeout before move-in',
+      'Night/weekend windows as needed',
     ],
   },
   {
-    title: 'Doors, Frames & Railings (Interior Metal/Wood)',
+    title: 'Doors, Frames & Railings (Metal)',
     icon: DoorClosed,
     items: [
-      'Enamel/urethane systems for durability',
-      'Proper de-glossing & adhesion primers',
-      'Fine-finish roll/brush or spray (as specified)',
+      'Durable enamel/urethane systems',
+      'De-gloss + adhesion primers for lasting hold',
+      'Fine-finish spray or roll as specified',
       'Hardware masked and protected',
-      'High-touch area scuff resistance',
+      'High-touch scuff resistance',
     ],
   },
   {
-    title: 'Hallways, Lobbies & Common Areas',
-    icon: Layers,
+    title: 'Common Areas: Corridors & Lobbies',
+    icon: PanelsTopLeft,
     items: [
-      'Tenant-friendly scheduling (nights/weekends)',
-      'Impact-resistant eggshell/satin systems',
-      'Baseboards, elevator surrounds, trims',
-      'Wayfinding/numbering coordination',
+      'Dust-controlled prep and containment',
+      'Scuff-resistant eggshell/satin systems',
+      'Baseboards, trims, elevator surrounds',
+      'Wayfinding/signage coordination',
       'Clean turnovers with minimal downtime',
     ],
   },
   {
-    title: 'Drywall Repairs & Surface Prep',
+    title: 'Stairwells, Service Areas & Parkades',
+    icon: SquareStack,
+    items: [
+      'Anti-slip treads & line marking',
+      'Concrete, CMU, steel & galvanized metal',
+      'Rust-inhibitive primers on metal',
+      'Numbering, stencils & safety markings',
+      'Fast re-open protocols',
+    ],
+  },
+  {
+    title: 'Surface Prep, Drywall & Sealants',
     icon: Ruler,
     items: [
-      'Scrape, sand, patch, and spot-prime',
-      'Hairline crack and nail-pop repairs',
+      'Scrape, sand, patch & spot-prime',
       'Skim/feather blends to Level 4/5',
       'Stain blocking (water, smoke, tannin)',
-      'Full masking and floor protection',
+      'Caulking/sealants at gaps & joints',
+      'Full masking, hoarding & floor protection',
     ],
   },
   {
-    title: 'Cabinets, Built-ins & Feature Walls',
+    title: 'Cabinets, Millwork & Feature Walls',
     icon: Brush,
     items: [
-      'Kitchen/bath cabinet refinishing',
+      'Built-ins & reception/amenity millwork',
       'Wood stains, toners & clear coats',
-      'Fine-finish spray where appropriate',
-      'Sample/mockups for approval',
-      'Brand/color standards matched',
+      'Fine-finish spray where specified',
+      'Mockups/samples for approvals',
+      'Building brand colors matched',
     ],
   },
   {
-    title: 'Low-Odor & Hygienic Systems',
+    title: 'Protective & Hygienic Coatings',
     icon: ShieldCheck,
     items: [
-      'Washable, scrubbable interior finishes',
-      'Zero/low-VOC for occupied suites',
-      'Anti-microbial & moisture-tolerant options',
+      'Epoxy/urethane for high-wear areas',
+      'Washable, scuff-resistant paints',
+      'Anti-graffiti & sacrificial coats',
+      'Moisture & corrosion resistance',
       'Manufacturer-approved specs',
-      'Fast re-entry/re-use protocols',
-    ],
-  },
-  {
-    title: 'Move-In/Out & Touch-Up Programs',
-    icon: Sparkles,
-    items: [
-      'Suite turnovers & punch-list items',
-      'Color continuity across units',
-      'High-traffic scuff repair & blending',
-      'Quick scheduling to meet deadlines',
-      'Post-work tidy and sign-off',
     ],
   },
 ]
 
-export default function InteriorServicesMenu() {
-  const [openIndex, setOpenIndex] = useState(0)   // mobile
-  const [active, setActive] = useState(0)         // desktop
-
+export default function MultiUnitPmServicesMenu() {
+  const [openIndex, setOpenIndex] = useState(0) // mobile: first open
+  const [active, setActive] = useState(0) // desktop: active tab
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i)
 
   return (
     <section
       className="relative overflow-hidden py-16 lg:py-20"
       style={{ background: 'var(--hero-gradient)' }}
-      aria-label="Interior painting scopes and services"
+      aria-label="Multi-Unit / Property Management painting scopes and services"
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mb-10 text-center">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-100)]">
-            Professional <span className="text-[var(--primary-100)]">Interior Painting</span> Services
+            Professional <span className="text-[var(--primary-100)]">Multi-Unit / PM</span> Services
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-[var(--text-200)] text-lg">
-            Clean, low-odor, and durable finishes—perfect for occupied suites, common areas, and tenant improvements. 
-            Dust-controlled prep and tight timelines, handled professionally.
+            Suite turnovers, corridors, stairwells, and common areas—tenant-friendly scheduling, dust-controlled prep,
+            and standardized finishes delivered with minimal disruption.
           </p>
         </header>
 
-        {/* Mobile: accordions */}
+        {/* Mobile: animated accordions */}
         <ul className="space-y-4 md:hidden">
           {SERVICES.map(({ title, items, icon: Icon }, i) => (
             <li
@@ -161,9 +161,9 @@ export default function InteriorServicesMenu() {
           ))}
         </ul>
 
-        {/* Desktop: side tabs */}
+        {/* Desktop: Side tabs (equal-height columns) */}
         <div className="hidden md:grid md:grid-cols-12 gap-8 items-stretch">
-          {/* Left tabs column */}
+          {/* Tabs */}
           <aside className="md:col-span-5 lg:col-span-4">
             <div className="h-full rounded-3xl border border-[var(--bg-300)] bg-white p-2 shadow-sm flex flex-col">
               <ul className="flex-1">
@@ -173,16 +173,23 @@ export default function InteriorServicesMenu() {
                     <li key={title} className="p-1">
                       <button
                         onClick={() => setActive(i)}
-                        className={`w-full flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
-                          ${isActive
-                            ? 'bg-[var(--primary-300)]/20 ring-1 ring-[var(--primary-200)]'
-                            : 'hover:bg-[var(--bg-100)]'
+                        className={`w-full cursor-pointer flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
+                          ${
+                            isActive
+                              ? 'bg-[var(--primary-300)]/20 ring-1 ring-[var(--primary-200)]'
+                              : 'hover:bg-[var(--bg-100)]'
                           }`}
                         aria-current={isActive ? 'true' : 'false'}
                       >
-                        <span className={`inline-flex h-9 w-9 items-center justify-center rounded-xl border 
-                          ${isActive ? 'border-[var(--primary-200)] bg-[var(--primary-300)]/30' : 'border-[var(--bg-300)] bg-[var(--bg-100)]'}
-                          text-[var(--primary-100)]`}>
+                        <span
+                          className={`inline-flex h-9 w-9 items-center justify-center rounded-xl border 
+                          ${
+                            isActive
+                              ? 'border-[var(--primary-200)] bg-[var(--primary-300)]/30'
+                              : 'border-[var(--bg-300)] bg-[var(--bg-100)]'
+                          }
+                          text-[var(--primary-100)]`}
+                        >
                           <Icon className="h-5 w-5" />
                         </span>
                         <span className="font-medium text-[var(--text-100)]">{title}</span>
@@ -194,19 +201,17 @@ export default function InteriorServicesMenu() {
             </div>
           </aside>
 
-          {/* Right detail panel */}
+          {/* Detail panel */}
           <section className="md:col-span-7 lg:col-span-8">
             <div className="h-full rounded-3xl border border-[var(--bg-300)] bg-white p-6 shadow-sm flex flex-col">
               <header className="mb-4 flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-100)] text-[var(--primary-100)]">
+                <span className="inline-flex h-10 w-10 items-center  justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-100)] text-[var(--primary-100)]">
                   {(() => {
                     const Icon = SERVICES[active].icon
                     return <Icon className="h-5 w-5" />
                   })()}
                 </span>
-                <h3 className="text-xl font-semibold text-[var(--text-100)]">
-                  {SERVICES[active].title}
-                </h3>
+                <h3 className="text-xl font-semibold text-[var(--text-100)]">{SERVICES[active].title}</h3>
               </header>
 
               <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
@@ -219,7 +224,7 @@ export default function InteriorServicesMenu() {
               </ul>
 
               <div className="mt-6 md:mt-auto">
-                <HeroCta2 buttontext="Get Interior Painting Estimate →" />
+                <HeroCta2 buttontext="Get Multi-Unit / PM Estimate →" />
               </div>
             </div>
           </section>

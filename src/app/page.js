@@ -119,22 +119,12 @@ export default function Home() {
           <WhyChooseUs />
         </SectionBackground>
 
-        {/* …then compact Trust + Testimonials (logos + short social proof)
-        <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
-          <TrustSection
-            variant="compact"
-            title="Trusted by property managers, builders & operators"
-            subtitle="WSIB-covered crews • Clean sites • Spec-accurate finishes across the GTA"
-            logos={trustLogos}
-            testimonials={trustTestimonials}
-            className="pt-8"
-          />
-        </SectionBackground> */}
 
         {/* Visual proof next */}
         <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
+         <ServiceAreaHero/>
           <ProjectsSection />
-          <ServiceAreaHero/>
+         
         </SectionBackground>
 
         <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>

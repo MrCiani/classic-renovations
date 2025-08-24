@@ -8,7 +8,7 @@ import ExteriorServicesMenu from "./exterior-services";     // ← exterior serv
 import ExteriorTrustSection from "./exterior-trust";
 import ExteriorBentoHero from "./exterior-hero";            // ← exterior hero
 import ExteriorWhatToExpectCC from "./exterior-whattoexpect";
-import ExteriorBeforeAfter from "./beforeafter";
+
 import ExteriorProjectHighlights from "./view-projects";       // ← exterior projects carousel
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
@@ -146,7 +146,7 @@ export default function ExteriorServicePage() {
           </SectionBackground>
           <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={0.6}>
           <ExteriorProjectHighlights />
-         <ExteriorBeforeAfter/> 
+         
          </SectionBackground>
         
 
