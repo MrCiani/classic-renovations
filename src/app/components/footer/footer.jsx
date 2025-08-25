@@ -6,10 +6,10 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react
 
 export default function SiteFooter({
   brand = 'Classic Contracting',
-  phone = '+1 (437) 555-5555',
-  phoneHref = 'tel:+14375555555',
+  phone = '+1 (647) 863-4562',
+  phoneHref = 'tel:+16478634562',
   email = 'hello@classiccontracting.ca',
-  emailHref = 'mailto:hello@classiccontracting.ca',
+  emailHref = 'Ukaraalp@gmail.com',
   address = '205 - 1100 Finch Ave W, North York, ON M3J 2E2',
   logoSrc, // e.g. '/logo.svg'
 }) {
@@ -33,8 +33,8 @@ export default function SiteFooter({
                   priority
                 />
               ) : (
-                <div className="h-10 w-40 rounded-md ring-1 ring-white/20 bg-white/10 grid place-items-center text-white/80 text-sm">
-                  Your Logo
+                <div className="h-10 w-40 rounded-md ring-1 ring-white/20 bg-white grid place-items-center text-white/80 text-sm">
+                  
                 </div>
               )}
             </div>
@@ -45,7 +45,7 @@ export default function SiteFooter({
             </p>
 
             {/* Socials */}
-            <div className="mt-4 flex items-center gap-3">
+            {/* <div className="mt-4 flex items-center gap-3">
               <Link aria-label="Instagram" href="#" className="p-2 rounded-full ring-1 ring-white/20 hover:bg-white/10">
                 <Instagram className="h-4 w-4 text-white" />
               </Link>
@@ -55,7 +55,7 @@ export default function SiteFooter({
               <Link aria-label="LinkedIn" href="#" className="p-2 rounded-full ring-1 ring-white/20 hover:bg-white/10">
                 <Linkedin className="h-4 w-4 text-white" />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick links */}
@@ -63,7 +63,7 @@ export default function SiteFooter({
             <h3 className="text-sm font-semibold tracking-wide text-white">Company</h3>
             <ul className="mt-3 space-y-2 text-white/80">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
-              <li><Link href="/painting" className="hover:text-white">Painting Services</Link></li>
+              {/* <li><Link href="/services" className="hover:text-white">Painting Services</Link></li> */}
               <li><Link href="/project-gallery" className="hover:text-white">Project Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             </ul>
@@ -98,14 +98,14 @@ export default function SiteFooter({
               </li>
             </ul>
 
-            <Link
+            {/* <Link
               href="/contact"
-              className="mt-5 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium
-                         bg-white text-[var(--primary-100)] shadow-sm hover:bg-white/90 focus:outline-none
+              className="mt-5 inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-medium
+                         bg-[var(--accent-100)]  shadow-sm hover:bg-white/90 focus:outline-none
                          focus-visible:ring-2 focus-visible:ring-white"
             >
-              Request Proposal
-            </Link>
+            <span className='text-[var(--text-100)]'>Request Proposal</span>  
+            </Link> */}
           </div>
         </div>
       </div>
@@ -115,8 +115,8 @@ export default function SiteFooter({
         <div className="mx-auto max-w-6xl px-4 py-4 text-[13px] text-white/80 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p>© {year} {brand}. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-white">Privacy</Link>
-            <Link href="/terms" className="hover:text-white">Terms</Link>
+            {/* <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link> */}
           </div>
         </div>
       </div>

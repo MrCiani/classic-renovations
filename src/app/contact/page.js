@@ -1,4 +1,5 @@
 import Navigation from "../components/Nav-Menu/navigation";
+import SectionBackground from "../components/Image-Background";
 
 import ContactIntro from "./contactcard";
 import ServiceAreaHero from "../components/service-area/ServiceAreasMapRegions";
@@ -28,15 +29,20 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[var(--bg-100)] text-[var(--text-100)]">
+    <main className="min-h-screen  text-[var(--text-100)]">
       {/* HERO / FORM */}
       <Navigation/>
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
       <ContactIntro />
-
+      </SectionBackground>
       {/* Optional: FAQ + Map sections can be added here later */}
       {/* <ContactFAQ /> */}
+
+
       {/* <ServiceAreaMap /> */}
+      <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
       <ServiceAreaHero/>
+      </SectionBackground>
       <ContactMap/>
 
       {/* JSON-LD for LocalBusiness + ContactPoint */}
