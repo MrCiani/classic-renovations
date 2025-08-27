@@ -2,16 +2,20 @@
 
 import { MapPin, ExternalLink } from 'lucide-react'
 
-/**
- * ContactMap
- * Responsive Google Maps embed with rounded corners and a "Get directions" CTA.
- * No API key required (uses Maps Embed via query string).
- */
 export default function ContactMap() {
-  const address = '89 Winges Rd, Woodbridge, ON L4L 6B8'
-  const query = encodeURIComponent(address)
-  const mapSrc = `https://www.google.com/maps?q=${query}&output=embed`
-  const directionsHref = `https://www.google.com/maps?daddr=${query}`
+  // From your Google Maps link
+  const lat = 43.7697249
+  const lng = -79.4736475
+  const placeLabel = 'Classic Contracting Office'
+  const address = 'Unit 205, 1100 Finch Ave W, North York, ON M3J 2E2'
+
+  // Embed the exact coordinates with a label
+  const mapSrc = `https://www.google.com/maps?hl=en&q=${lat},${lng}(${encodeURIComponent(
+    placeLabel
+  )})&z=16&output=embed`
+
+  // Best-practice directions link
+  const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
 
   return (
     <section className="px-4 lg:px-8 py-10">
@@ -22,10 +26,9 @@ export default function ContactMap() {
         </div>
 
         <div className="rounded-2xl border border-[var(--bg-300)] overflow-hidden shadow-sm bg-white">
-          {/* Keep a fixed height so the map is big & clear; adjust as needed */}
           <div className="relative h-[480px] w-full">
             <iframe
-              title={`Map to ${address}`}
+              title={`Map to ${placeLabel}`}
               src={mapSrc}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -41,7 +44,8 @@ export default function ContactMap() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-white bg-[var(--primary-100)] hover:bg-[var(--primary-200)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-100)] focus:ring-offset-2"
             >
-              <span className='text-white'>Get Directions</span> <ExternalLink className="h-4 w-4 text-white" />
+              <span className="text-white">Get Directions</span>
+              <ExternalLink className="h-4 w-4 text-white" />
             </a>
           </div>
         </div>
