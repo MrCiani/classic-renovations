@@ -57,18 +57,18 @@ const services = [
     ],
     alt: 'Multi-unit corridor repaint with durable finishes and consistent coverage'
   },
-  {
-    title: 'Cabinet Refinishing',
-    image: '/Service-Images/cabinet.jpg',
-    path: '/services/cabinets',
-    icon: Paintbrush,
-    points: [
-      'Kitchen & vanity spraying',
-      'Factory-smooth finish',
-      'Durable, wipe-clean enamel surfaces'
-    ],
-    alt: 'Cabinet refinishing with factory-smooth sprayed enamel finish'
-  },
+  // {
+  //   title: 'Cabinet Refinishing',
+  //   image: '/Service-Images/cabinet.jpg',
+  //   path: '/services/cabinets',
+  //   icon: Paintbrush,
+  //   points: [
+  //     'Kitchen & vanity spraying',
+  //     'Factory-smooth finish',
+  //     'Durable, wipe-clean enamel surfaces'
+  //   ],
+  //   alt: 'Cabinet refinishing with factory-smooth sprayed enamel finish'
+  // },
 ]
 
 export default function ServicesOffered() {

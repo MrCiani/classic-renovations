@@ -2,56 +2,68 @@
 
 import { Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react'
 import { useState } from 'react'
+import { supabase } from '@/app/lib/supabaseClient'
+import toast from 'react-hot-toast'
 
 export default function ContactIntro() {
   const [loading, setLoading] = useState(false)
   const [msg, setMsg] = useState(null)
 
- async function handleSubmit(e) {
-  e.preventDefault()
-  setMsg(null)
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (loading) return
+    setMsg(null)
 
-  const form = e.currentTarget
-  const data = Object.fromEntries(new FormData(form).entries())
+    const form = e.currentTarget
+    const data = Object.fromEntries(new FormData(form).entries())
+    const { name = '', email = '', message = '' } = data
 
-  if (!data.name || !data.email || !data.message) {
-    setMsg('Please fill in your name, email, and message.')
-    return
-  }
-
-  try {
-    setLoading(true)
-
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    })
-
-    // Try to parse JSON, but don't crash if body is empty/non-JSON
-    let payload = null
-    let rawText = ''
-    try {
-      rawText = await res.clone().text() // read for debugging
-      payload = rawText ? JSON.parse(rawText) : null
-    } catch {}
-
-    if (!res.ok) {
-      const msg = payload?.error || `Request failed (${res.status})`
-      console.error('API error:', { status: res.status, payload, rawText })
-      throw new Error(msg)
+    if (!name || !email || !message) {
+      setMsg('Please fill in your name, email, and message.')
+      toast.error('Please fill in your name, email, and message.')
+      return
     }
 
-    form.reset()
-    setMsg("Thanks! We'll get back to you shortly.")
-  } catch (err) {
-    console.error('submit error:', err)
-    setMsg(`Error: ${err.message}`)
-  } finally {
-    setLoading(false)
-  }
-}
+    if (data.company) {
+      form.reset()
+      toast.success('Thanks! We’ll get back to you shortly.')
+      return
+    }
 
+    try {
+      setLoading(true)
+
+      const user_agent =
+        typeof navigator !== 'undefined' ? navigator.userAgent : null
+
+      // Show a loading toast and resolve it automatically
+      await toast.promise(
+        supabase.from('contact_messages').insert([{
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          property: data.property || null,
+          message: data.message,
+          user_agent,
+        }]),
+        {
+          loading: 'Sending…',
+          success: 'Message sent! We’ll reply within a business day.',
+          error: (err) => err?.message || 'Something went wrong.',
+        }
+      )
+
+      form.reset()
+      setMsg(null) // optional since toast already confirms
+    } catch (err) {
+      console.error('supabase insert error:', err)
+      // toast.promise already showed an error; keep a fallback just in case
+      toast.error(err?.message || 'Something went wrong.')
+      setMsg(`Error: ${err.message}`)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <section className="relative overflow-hidden" style={{ background: 'var(--hero-gradient)' }}>
@@ -67,45 +79,27 @@ export default function ContactIntro() {
           </p>
 
           {/* Trust bullets */}
-          <ul className="mt-6 space-y-4 text-[var(--text-100)]">
-            <li className="flex items-center gap-3">
+          <ul className="mt-6 space-y-4 gap-10 text-[var(--text-100)]">
+            <li className="flex items-center text-lg gap-3">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-100)]/10 text-[var(--accent-200)]">
-                <ShieldCheck className="h-5 w-5" />
+                <ShieldCheck className="h-8 w-8" />
               </span>
               Licensed & Insured Professionals
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex text-lg items-center gap-3">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-100)]/10 text-[var(--accent-200)]">
-                <ShieldCheck className="h-5 w-5" />
+                <ShieldCheck className="h-8 w-8" />
               </span>
               5-Star Rated Across the GTA
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center text-lg gap-3">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-100)]/10 text-[var(--accent-200)]">
-                <ShieldCheck className="h-5 w-5" />
+                <ShieldCheck className="h-8 w-8" />
               </span>
               Satisfaction Guarantee on Every Project
             </li>
           </ul>
 
-          {/* Contact chips (optional) */}
-          <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <a href="tel:+1-000-000-0000" className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1 shadow-sm">
-              <Phone className="h-4 w-4" /> +1 (000) 000-0000
-            </a>
-            <a href="mailto:hello@classiccontracting.ca" className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1 shadow-sm">
-              <Mail className="h-4 w-4" /> hello@classiccontracting.ca
-            </a>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-white px-3 py-1 shadow-sm">
-              <Clock className="h-4 w-4" /> Mon–Fri 8–6
-            </span>
-          </div>
-
-          {/* Location blurb (optional) */}
-          <div className="mt-3 flex items-start gap-3 text-sm text-[var(--text-200)]">
-            <MapPin className="h-5 w-5 mt-0.5" />
-            <p>205 – 1100 Finch Ave W, North York, ON M3J 2E2</p>
-          </div>
         </div>
 
         {/* Right Column (Inquiry card) */}
@@ -115,7 +109,7 @@ export default function ContactIntro() {
             <p className="mt-1 text-sm text-[var(--text-200)]">We'll reply within one business day.</p>
 
             <form onSubmit={handleSubmit} className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Honeypot (anti-spam) */}
+              {/* Honeypot */}
               <input
                 type="text"
                 name="company"
@@ -164,9 +158,9 @@ export default function ContactIntro() {
                 >
                   {loading ? 'Sending…' : 'Send Request'}
                 </button>
-                <p className="text-xs text-[var(--text-300)]">
+                {/* <p className="text-xs text-[var(--text-300)]">
                   By sending, you agree to our privacy policy.
-                </p>
+                </p> */}
               </div>
 
               {msg && (

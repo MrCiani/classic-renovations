@@ -2,6 +2,8 @@ import Navigation from "../components/Nav-Menu/navigation";
 import SectionBackground from "../components/Image-Background";
 
 import ContactIntro from "./contactcard";
+import ContactCards from "./contact-cards";
+import SiteFooter from "../components/footer/footer";
 import ServiceAreaHero from "../components/service-area/ServiceAreasMapRegions";
 import ContactMap from "./contactmap";
 
@@ -35,6 +37,7 @@ export default function ContactPage() {
       <SectionBackground image="/Background-Images/bgimage1.jpg" opacity={0.2}>
       <ContactIntro />
       </SectionBackground>
+      <ContactCards/>
       {/* Optional: FAQ + Map sections can be added here later */}
       {/* <ContactFAQ /> */}
 
@@ -44,6 +47,7 @@ export default function ContactPage() {
       <ServiceAreaHero/>
       </SectionBackground>
       <ContactMap/>
+      <SiteFooter/>
 
       {/* JSON-LD for LocalBusiness + ContactPoint */}
       <script

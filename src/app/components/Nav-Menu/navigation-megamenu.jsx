@@ -12,7 +12,7 @@ const paintingServices = [
   { label: 'Exterior Painting', href: '/services/exterior', icon: Home, desc: 'Siding, brick, stucco, soffits' },
   { label: 'Commercial', href: '/services/commercial', icon: Layers, desc: 'Retail, offices, common areas' },
   { label: 'Multi-Unit / PM', href: '/services/multi-unit-pm', icon: SquareStack, desc: 'Turns, corridors, hallways' },
-  { label: 'Cabinet Refinishing', href: '/services/cabinets', icon: Sparkles, desc: 'Kitchen & vanity spraying, factory‑smooth finish' },
+  // { label: 'Cabinet Refinishing', href: '/services/cabinetry', icon: Sparkles, desc: 'Kitchen & vanity spraying, factory‑smooth finish' },
 ]
 
 // Optional: audiences also as component refs (if you use them here later)

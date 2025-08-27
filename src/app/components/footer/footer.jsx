@@ -9,9 +9,9 @@ export default function SiteFooter({
   phone = '+1 (647) 863-4562',
   phoneHref = 'tel:+16478634562',
   email = 'hello@classiccontracting.ca',
-  emailHref = 'Ukaraalp@gmail.com',
+  emailHref = 'mailto:Ukaraalp@gmail.com',
   address = '205 - 1100 Finch Ave W, North York, ON M3J 2E2',
-  logoSrc, // e.g. '/logo.svg'
+  logoSrc = '/logo/cc-logo-f3.svg'
 }) {
   const year = new Date().getFullYear();
 
@@ -22,14 +22,14 @@ export default function SiteFooter({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand / blurb */}
           <div>
-            <div className="h-10 flex items-center">
+            <div className="h-20 rounded-2xl  flex items-center">
               {logoSrc ? (
                 <Image
                   src={logoSrc}
                   alt={`${brand} logo`}
                   width={160}
                   height={40}
-                  className="h-10 w-auto"
+                  className="h-40 w-full"
                   priority
                 />
               ) : (
@@ -60,12 +60,14 @@ export default function SiteFooter({
 
           {/* Quick links */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wide text-white">Company</h3>
+            <h3 className="text-sm font-semibold tracking-wide text-white">Services</h3>
             <ul className="mt-3 space-y-2 text-white/80">
-              <li><Link href="/" className="hover:text-white">Home</Link></li>
+              {/* <li><Link href="/" className="hover:text-white">Home</Link></li> */}
               {/* <li><Link href="/services" className="hover:text-white">Painting Services</Link></li> */}
-              <li><Link href="/project-gallery" className="hover:text-white">Project Gallery</Link></li>
-              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link href="/services/interior" className="hover:text-white">Interior</Link></li>
+               <li><Link href="/services/exterior" className="hover:text-white">Exterior</Link></li>
+               <li><Link href="/services/commercial" className="hover:text-white">Commerical</Link></li>
+               <li><Link href="/services/commercial" className="hover:text-white">Multi-Units</Link></li>
             </ul>
           </div>
 

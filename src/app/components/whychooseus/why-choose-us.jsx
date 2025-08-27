@@ -1,6 +1,7 @@
 import { ShieldCheck, Timer, Sparkles, Leaf, ThumbsUp, ClipboardCheck, Building2 } from 'lucide-react'
 import Link from 'next/link'
 import HeroCta2 from '../cta-folder/call-to-action2'
+import Image from 'next/image'
 
 const points = [
   {
@@ -58,20 +59,28 @@ export default function WhyChooseUs() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="mb-10 flex flex-col items-start sm:items-center gap-3 text-left sm:text-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium border border-[var(--bg-300)] text-[var(--text-200)]">
-            <Building2 className="w-4 h-4" aria-hidden="true" />
-            Why choose Classic Contracting
+          
+<div className="relative w-[400px] h-[100px]">
+  <Image
+    src="/paint-can.svg"
+    alt="Classic Contracting Logo"
+    fill
+    className="object-contain"
+  />
+</div>
+
+          <span className=" flex bg-white items-center justify-center gap-2 px-3 py-1 rounded-full text-xl font-medium border border-[var(--bg-300)] text-[var(--primary-100)] ">
+            Why choose Classic Contracting?
           </span>
+
+
           <h2
             id="why-choose-us-title"
-            className="text-3xl sm:text-4xl font-extrabold text-[var(--text-100)] leading-tight"
+            className="text-4xl sm:text-5xl text-center font-extrabold text-[var(--text-100)] leading-tight"
           >
             Reliable crews. Professional finishes. Zero drama.
           </h2>
-          <p className="text-[var(--text-200)] max-w-2xl">
-            We hit schedules, coordinate with trades, and deliver clean, long-lasting interior and exterior painting across residential,
-            multi-unit, and commercial properties.
-          </p>
+   
         </div>
 
         {/* Feature grid (semantic list) */}
