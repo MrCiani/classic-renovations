@@ -5,7 +5,7 @@ import SiteFooter from "@/app/components/footer/footer";
 import SectionBackground from "@/app/components/Image-Background";
 import FAQSection from "./faq-interior";
 import InteriorServices from "./interior-services";
-import TrustSection from "@/app/components/whychooseus/TrustSection";
+import InteriorTrustSection from "./interior-trust";
 import HeroInterior from "./interior-hero";
 import InteriorWhatToExpectCC from "./interior-whattoexpect";
 import ProjectHighlights from "./view-projects";
@@ -108,44 +108,7 @@ export default function InteriorServicePage() {
 
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={.6}>
           <HeroInterior />
-<TrustSection
-  variant="compact"
-  title="Trusted for Interior Painting Across the GTA"
-  subtitle="Clean lines, dust-controlled prep, and professional finishes for suites, offices, and common areas."
-  logos={[
-    { src: '/trusted-badges/experiencebadge.png', alt: '25+ Years Interior Painting Experience' },
-    { src: '/trusted-badges/wsib4.svg', alt: 'WSIB Ontario – Approved Providers' },
-  ]}
-  testimonials={[
-    {
-      headline: 'Flawless condo repaint',
-      quote:
-        'Our suite repaint was handled quickly and with care. The walls and trim look brand new, and the crew kept the unit spotless throughout.',
-      name: 'Martinez D.',
-      role: 'Condo Owner',
-      avatar: 'martinez.jpg',
-      rating: 5,
-    },
-    {
-      headline: 'Minimal disruption to staff',
-      quote:
-        'Classic Contracting repainted our office while keeping operations running. Clean edges, no dust, and professional scheduling every step of the way.',
-      name: 'Johnny S.',
-      role: 'Office Manager',
-      avatar: 'johnny.jpg',
-      rating: 5,
-    },
-    {
-      headline: 'Consistent quality across units',
-      quote:
-        'We had multiple rental units turned over with fresh paint. Every space was consistent, crisp, and completed on schedule — zero delays.',
-      name: 'Karen L.',
-      role: 'Property Manager',
-      avatar: 'karen.jpg',
-      rating: 5,
-    },
-  ]}
-/>
+<InteriorTrustSection/>
 
 
           </SectionBackground>

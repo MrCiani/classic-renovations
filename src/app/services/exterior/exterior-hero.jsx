@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import HeroCta from "@/app/components/cta-folder/Call-to-action";
-import { motion, useReducedMotion } from "framer-motion";
+import { Paintbrush } from "lucide-react";
+import { motion, useReducedMotion} from "framer-motion";
 
 /**
  * Classic Contracting — Hero (Exterior Split with Social Proof Overlay)
@@ -29,9 +30,13 @@ export default function HeroExterior() {
           whileInView="show"
           className="lg:col-span-6 text-center lg:text-left self-start"
         >
-          <p className="text-sm font-semibold tracking-wide text-[var(--primary-100)] uppercase">
-            Trusted by Homeowners & Property Managers Across the GTA
-          </p>
+<div className="flex justify-center sm:justify-start">
+  <span className="inline-flex items-center gap-2 uppercase rounded-full px-3 py-1 text-sm font-medium text-[var(--primary-100)]">
+    
+    Trusted by Property Managers Across the GTA
+  </span>
+</div>
+
 
           <h1 className="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">
             <span className="text-[var(--primary-100)]">Exterior Finishes</span>

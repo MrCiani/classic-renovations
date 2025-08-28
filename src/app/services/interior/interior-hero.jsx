@@ -18,10 +18,14 @@ export default function HeroInterior() {
             transition={{ duration: 0.4 }}
             className="lg:col-span-6"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--bg-300)] bg-[var(--bg-200)] px-3 py-1 text-xs font-medium text-[var(--text-200)]">
-              <Paintbrush className="h-4 w-4" />
-              Interior Painting
-            </span>
+<div className="flex justify-center sm:justify-start">
+  <span className="inline-flex items-center gap-2 uppercase rounded-full px-3 py-1 text-xs font-medium text-[var(--primary-100)]">
+    <Paintbrush className="h-4 w-4" />
+    Trusted by Property Managers Across the GTA
+  </span>
+</div>
+
+
 
             <h1 className="mt-4 text-4xl/tight font-extrabold text-[var(--text-100)] sm:text-5xl">
               Flawless interiors—<span className="text-[var(--primary-100)]">walls, ceilings, trim</span>

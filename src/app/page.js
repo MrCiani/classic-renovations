@@ -106,6 +106,7 @@ export default function Home() {
         <SectionBackground image="/Background-Images/bgimage1.jpg">
           <HomeHero />               {/* h1 lives here */}
           <TrustedBy />
+          
           <HomeValueProp />          {/* ensure this renders an h2 */}
         </SectionBackground>
 

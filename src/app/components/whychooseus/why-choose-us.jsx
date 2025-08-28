@@ -58,21 +58,24 @@ export default function WhyChooseUs() {
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <div className="mb-10 flex flex-col items-start sm:items-center gap-3 text-left sm:text-center">
+        <div className="mb-10 flex flex-col justify-center  sm:items-center gap-3 sm:text-center">
           
-<div className="relative w-[400px] h-[100px]">
-  <Image
-    src="/paint-can.svg"
-    alt="Classic Contracting Logo"
-    fill
-    className="object-contain"
-  />
+<div className="flex justify-center">
+  <div className="relative w-[400px] h-[100px]">
+    <Image
+      src="/paint-can.svg"
+      alt="Classic Contracting Logo"
+      fill
+      className="object-contain"
+    />
+  </div>
 </div>
 
-          <span className=" flex bg-white items-center justify-center gap-2 px-3 py-1 rounded-full text-xl font-medium border border-[var(--bg-300)] text-[var(--primary-100)] ">
+          <div className='flex justify-center'>
+          <span className=" flex w-full bg-white items-center justify-center gap-2 px-3 py-1 rounded-full text-xl font-medium border border-[var(--bg-300)] text-[var(--primary-100)] ">
             Why choose Classic Contracting?
           </span>
-
+          </div>
 
           <h2
             id="why-choose-us-title"
