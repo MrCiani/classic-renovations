@@ -57,7 +57,7 @@ export default function ProjectsSection() {
                 </li>
               </ul>
               <Link
-                href="/projects/condos-apartments" /* change if your route is /projects/condos */
+                href="/projects/condos" /* change if your route is /projects/condos */
                 aria-label="Learn more about Condos and Apartments painting projects"
                 className="inline-block w-full sm:w-auto text-center bg-[var(--primary-100)] px-5 sm:px-6 py-3 rounded-xl hover:bg-[var(--primary-200)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-200)] transition"
               >
