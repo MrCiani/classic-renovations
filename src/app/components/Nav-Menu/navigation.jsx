@@ -36,8 +36,7 @@ export default function Navigation() {
       title: 'Project Gallery',
       children: [
         { label: 'Homes', to: '/projects/homes' },
-        { label: 'Condos', to: '/projects/condos' },
-        { label: 'Apartments', to: '/projects/apartments' },
+        { label: 'Condos & Apartments', to: '/projects/condos' },
         { label: 'Commercial', to: '/projects/commercial' },
       ],
     },

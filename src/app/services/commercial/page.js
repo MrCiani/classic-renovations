@@ -9,7 +9,7 @@ import CommercialTrustSection from "./commercial-trust";
 import HeroCommercial from "./commercial-hero";
 import CommercialWhatToExpectCC from "./commercial-whattoexpect";
 import CommercialProjectHighlights from "./view-projects";
-import CommercialBeforeAfter from "./beforeafter";
+// import CommercialBeforeAfter from "./beforeafter";
 
 // --- SEO Setup ---
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
@@ -150,7 +150,7 @@ export default function CommercialServicePage() {
         </SectionBackground>
         <SectionBackground image="/Background-Images/bgimage1.jpg" imageOpacity={0.6}>
           <CommercialProjectHighlights />
-          <CommercialBeforeAfter/>
+    
         </SectionBackground>
 
         {/* FAQ */}

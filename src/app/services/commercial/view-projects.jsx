@@ -11,36 +11,39 @@ const PROJECTS = [
     alt: 'Fresh repaint of a corporate office lobby',
     title: 'Office Lobby Upgrade',
     description:
-      'Low-odor, fast-cure coatings applied in an active office environment — minimal disruption with a modern finish.',
+      'Modern office lobby with reception desk and staircase, freshly repainted walls and trim.',
   },
   {
     src: '/commercial/project2.jpg',
     alt: 'Corridor repaint in a multi-unit residential building',
     title: 'Multi-Unit Corridor Refresh',
     description:
-      'Dust-controlled prep and durable eggshell coatings for high-traffic residential corridors.',
+      'Modern apartment corridor with freshly coated walls and doors in eggshell finish',
   },
+
   {
-    src: '/commercial/project3.jpg',
-    alt: 'Exterior repaint of a retail plaza',
-    title: 'Retail Plaza Repaint',
-    description:
-      'Complete façade refresh for a busy retail plaza — uniform coverage and improved brand image.',
-  },
-  {
-    src: '/commercial/project4.jpg',
-    alt: 'Industrial warehouse repaint',
-    title: 'Warehouse & BOH Upgrade',
-    description:
-      'High-durability epoxy and urethane systems applied to warehouse walls and back-of-house spaces.',
-  },
-  {
-    src: '/commercial/project5.jpg',
-    alt: 'Healthcare facility corridor repaint',
-    title: 'Healthcare Facility Repaint',
-    description:
-      'Low-VOC, washable coatings specified for healthcare corridors to meet compliance and hygiene standards.',
-  },
+  src: '/commercial/project3.jpg',
+  alt: 'Freshly painted warehouse with two-tone walls, red safety columns, and a reflective epoxy floor',
+  title: 'Warehouse & BOH Upgrade',
+  description:
+    'Industrial repaint with durable two-tone wall system, safety-red columns, and high-gloss epoxy flooring for heavy-traffic operations.',
+},
+{
+  src: '/commercial/project4.jpg',
+  alt: 'Bright, freshly painted facility corridor with neutral walls, clean baseboards, and gray doors',
+  title: 'Healthcare Facility Repaint',
+  description:
+    'Low-VOC, washable coatings applied throughout clinical corridors for hygiene, durability, and compliance.',
+},
+{
+  src: '/commercial/project5.jpg',
+  alt: 'Modern lobby with bold red accent wall and reception desk, crisp white trims, and glass balustrade',
+  title: 'Lobby Accent & Brand Wall',
+  description:
+    'High-coverage, scrub-resistant brand colour applied to feature wall and desk with razor-sharp lines and clean white trims.',
+}
+
+
 ]
 
 export default function CommercialProjectHighlights() {

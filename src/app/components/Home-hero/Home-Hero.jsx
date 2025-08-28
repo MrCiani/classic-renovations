@@ -100,7 +100,7 @@ export default function HomeHero() {
                   <HeroCta buttontext="Request a call back" />
                 </motion.div>
 
-                {/* NEW: 3-item stat strip */}
+                {/* Stat strip */}
                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/85">
                   <li className="flex items-center gap-2">
                     <span className="inline-block h-2 w-2 rounded-full bg-white/90" />
@@ -112,12 +112,6 @@ export default function HomeHero() {
                     <strong className="text-white">300+ clients</strong>
                     <span className="opacity-90">served GTA-wide</span>
                   </li>
-                  {/* <li className="flex items-center gap-2">
-                    <span className="inline-block h-2 w-2 rounded-full bg-white/90" />
-                    <strong className="text-white">
-                      4.9/5</strong>
-                    <span className="opacity-90">average rating</span>
-                  </li> */}
                 </ul>
               </div>
             </motion.div>
@@ -147,7 +141,10 @@ export default function HomeHero() {
                 </div>
 
                 <figcaption className="flex-1">
-                  <div className="flex items-center gap-1.5 text-[var(--accent-100)]" aria-label={`${t.rating} out of 5 stars`}>
+                  <div
+                    className="flex items-center gap-1.5 text-[var(--accent-100)]"
+                    aria-label={`${t.rating} out of 5 stars`}
+                  >
                     {Array.from({ length: t.rating }).map((_, i) => (
                       <motion.span
                         key={i}
@@ -187,7 +184,9 @@ export default function HomeHero() {
               >
                 <div className="group relative overflow-hidden rounded-[28px] border border-[var(--primary-100)] shadow-lg">
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <div className="aspect-[4/5.2] sm:h-full">
+
+                  {/* IMPORTANT: make the immediate parent of <Image fill /> relative + sized */}
+                  <div className="relative aspect-[4/5.2] sm:h-full">
                     <Image
                       src="/01-hero.jpg"
                       alt="Interior repaint in progress"
@@ -211,7 +210,8 @@ export default function HomeHero() {
                   transition={{ type: 'spring', stiffness: 230, damping: 20 }}
                   className="group relative overflow-hidden rounded-[24px] border border-[var(--primary-100)] shadow-md"
                 >
-                  <div className="aspect-[3/4]">
+                  {/* IMPORTANT: relative + aspect for fill image */}
+                  <div className="relative aspect-[3/4]">
                     <Image
                       src="/02-detail.jpg"
                       alt="Detail: crisp lines and finishes"
@@ -231,7 +231,8 @@ export default function HomeHero() {
                   transition={{ type: 'spring', stiffness: 230, damping: 20 }}
                   className="group relative overflow-hidden rounded-[24px] border border-[var(--primary-100)] shadow-md"
                 >
-                  <div className="aspect-[3/4]">
+                  {/* IMPORTANT: relative + aspect for fill image */}
+                  <div className="relative aspect-[3/4]">
                     <Image
                       src="/03-hero.jpg"
                       alt="Crew and prep work"

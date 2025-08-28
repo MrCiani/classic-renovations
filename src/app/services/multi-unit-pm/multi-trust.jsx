@@ -5,29 +5,31 @@ import { Sparkles, Star } from 'lucide-react'
 
 export default function MultiUnitPMTrustSection() {
   const logos = [
-    { src: '/trusted-badges/trust4.png', alt: 'beausoleil', href: 'https://beausoleilcondos.com/' },
-    { src: '/trusted-badges/trust5.jpg', alt: 'beausoleil', href: '#' },
-    { src: '/strata/hero-logo.jpg', alt: 'beausoleil', href: '#' },
-
+    { src: '/trusted-badges/trust4.png', alt: 'Beau Soleil Condos', href: 'https://beausoleilcondos.com/' },
+    { src: '/trusted-badges/trust5.jpg', alt: 'condos.ca', href: '#' },
+    { src: '/strata/hero-logo.jpg', alt: 'STRATA', href: '#' },
   ]
 
   const testimonials = [
     {
-      quote: 'Turnovers were on time and corridors stayed spotless throughout. Zero tenant complaints.',
+      quote:
+        'Turnovers were on time and corridors stayed spotless throughout. Zero tenant complaints.',
       name: 'James Distro',
       role: 'Senior Property Manager',
       avatar: 'james.jpg',
       rating: 5,
     },
     {
-      quote: 'Reliable crew, clear daily updates, and consistent color standards across units.',
+      quote:
+        'Reliable crew, clear daily updates, and consistent color standards across units.',
       name: 'Leslie Malkova',
       role: 'Property & Leasing Manager',
       avatar: 'leslie.jpg',
       rating: 5,
     },
     {
-      quote: 'I didnt think they would get it done, but I was wrong! Classic Contracting delivered exactly on schedule.',
+      quote:
+        "I didn't think they would get it done, but I was wrong! Classic Contracting delivered exactly on schedule.",
       name: 'Shane Vestova',
       role: 'Facilities & Operations Manager',
       avatar: 'shane.jpg',
@@ -52,24 +54,29 @@ export default function MultiUnitPMTrustSection() {
           </p>
         </header>
 
-        {/* Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-6 max-w-6xl mx-auto">
+        {/* Bigger logos */}
+        <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 lg:gap-14 my-2 min-h-[6rem] sm:min-h-[7rem] lg:min-h-[8rem]">
           {logos.map((item, i) => (
             <a
               key={i}
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-90 hover:opacity-100 transition h-20"
+              className="opacity-90 hover:opacity-100 transition inline-flex items-center justify-center"
               aria-label={item.alt}
               title={item.alt}
             >
               <Image
                 src={item.src}
-                alt={item.alt}
-                width={200}
-                height={80}
-                className="h-full w-full object-contain"
+                alt={`Client logo: ${item.alt}`}
+                // larger intrinsic size for crisp rendering
+                width={360}
+                height={160}
+                // keep aspect ratio (prevents Next/Image warnings)
+                className="h-auto w-auto object-contain max-h-24 sm:max-h-28 lg:max-h-32"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 320px"
+                loading="lazy"
+                decoding="async"
               />
             </a>
           ))}
@@ -102,7 +109,9 @@ export default function MultiUnitPMTrustSection() {
                       alt={`${t.name} avatar`}
                       width={48}
                       height={48}
-                      className="h-full w-full object-cover"
+                      className="h-12 w-12 object-cover rounded-full"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ) : (

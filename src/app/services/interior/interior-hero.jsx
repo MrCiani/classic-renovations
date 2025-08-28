@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+
 import HeroCta from '@/app/components/cta-folder/Call-to-action';
 import { motion } from 'framer-motion';
 import { Paintbrush, DoorClosed, Ruler, Wind, ShieldCheck, Sparkles } from 'lucide-react';
@@ -74,11 +74,12 @@ export default function HeroInterior() {
           >
             <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-3xl border border-[var(--bg-300)] bg-[var(--bg-200)] shadow-lg">
               <Image
-                src="/Service-images/interior2.jpg"
+                src="/hero1.jpg"
                 alt="Freshly painted interior with neutral walls, crisp trim, and clean ceiling lines"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
 
               {/* Floating pill callout (bottom-right) */}
