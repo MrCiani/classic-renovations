@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'High-rise, mid-rise, and commercial painting solutions for builders, project managers, and estimators.',
   icons: {
-    icon: '/cc-fav.png', // /public/cc-fav.png
+    icon: '/cc-fav5.png', // /public/cc-fav.png
   },
 }
 
