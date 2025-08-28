@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ShieldCheck, BadgeCheck, UserCheck } from 'lucide-react'
 import HeroCta from '../cta-folder/Call-to-action'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://classicrenos.ca'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://classic-contracting.ca'
 
 export default function HomeValueProp() {
   const logoUrl = `${SITE_URL}/valueprop-images/homevalueprop.jpg`
@@ -83,7 +83,7 @@ export default function HomeValueProp() {
         {/* Right: image */}
         <div className="rounded-2xl overflow-hidden shadow-lg border border-[var(--bg-300)] h-[400px] relative">
           <Image
-            src="/valueprop-images/homevalueprop.jpg"
+            src="/valueprop-images/photo1.jpg"
             alt="Professional painters applying low-VOC coatings with floors masked and dust-controlled prep"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
