@@ -36,7 +36,7 @@ export default function Home() {
     url: "https://classic-contracting.ca",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://classicrenos.ca/search?q={search_term_string}",
+      target: "https://classic-contracting.ca/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

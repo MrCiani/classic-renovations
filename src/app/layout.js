@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Classic Renovations',
+  title: 'Classic Contracting',
   description:
     'High-rise, mid-rise, and commercial painting solutions for builders, project managers, and estimators.',
   icons: {
