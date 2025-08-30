@@ -121,14 +121,14 @@ export default function InteriorPaintingGallery() {
             href="/projects/commercial"
             className="text-[var(--primary-100)] underline hover:text-[var(--primary-200)]"
           >
-            ← Interior Painting
+            ← Commerical Projects
           </Link>
         </div>
 
         {/* Heading */}
         <header className="mb-6">
           <h1 className="text-3xl lg:text-4xl font-extrabold text-[var(--text-100)]">
-            Interior Painting — Offices, Clinics & Retail
+            Commercial Painting — Offices, Clinics & Retail
           </h1>
           <p className="text-[var(--text-200)] mt-2">
             Walls • Ceilings • Doors &amp; Trim • Corridors • Reception Areas

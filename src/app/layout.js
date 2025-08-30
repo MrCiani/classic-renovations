@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'High-rise, mid-rise, and commercial painting solutions for builders, project managers, and estimators.',
   icons: {
-    icon: '/cc-fav5.png', // /public/cc-fav.png
+    icon: '/cc-fav5.png', 
   },
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} antialiased min-h-screen overflow-x-clip bg-[var(--bg-100)] text-[var(--text-100)]`}>
         {children}
-        <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         <CallNowButton />
       </body>
     </html>

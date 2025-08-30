@@ -173,7 +173,7 @@ export default function InteriorServicesMenu() {
                     <li key={title} className="p-1">
                       <button
                         onClick={() => setActive(i)}
-                        className={`w-full flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
+                        className={`w-full cursor-pointer flex items-center gap-3 rounded-2xl px-3 py-3 text-left transition
                           ${isActive
                             ? 'bg-[var(--primary-300)]/20 ring-1 ring-[var(--primary-200)]'
                             : 'hover:bg-[var(--bg-100)]'
