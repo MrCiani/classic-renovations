@@ -31,8 +31,9 @@ export default function ExteriorBeforeAfter() {
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-100)]">
           Exterior Before & After
         </h2>
+        <span className='font-bold text-[var(--primary-100)]'>Slide to compare</span> <br/>
         <p className="mt-2 text-[var(--text-200)]">
-          Slide to compare transformations across brick, stucco, and multi-unit exteriors.
+        transformations across brick, stucco, and multi-unit exteriors.
         </p>
       </header>
 

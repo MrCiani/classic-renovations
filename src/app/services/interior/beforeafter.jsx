@@ -34,7 +34,7 @@ export default function InteriorBeforeAfter() {
           Interior Before & After
         </h2>
         <p className="mt-2 text-[var(--text-200)]">
-          Slide to compare transformations across brick, stucco, and multi-unit exteriors.
+          <span className='font-bold text-[var(--primary-100)]'>Slide to compare</span> <br/>transformations across brick, stucco, and multi-unit exteriors.
         </p>
       </header>
 
