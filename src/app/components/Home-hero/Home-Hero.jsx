@@ -122,7 +122,7 @@ export default function HomeHero() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="mt-4 rounded-[28px] border border-[var(--bg-300)] bg-white/90 px-5 py-4 shadow-sm backdrop-blur transition hover:shadow-md"
+              className="mt-4 rounded-[28px]  border-[var(--bg-300)]  px-5 py-4  backdrop-blur transition hover:shadow-md"
               onMouseEnter={() => (hoverRef.current = true)}
               onMouseLeave={() => (hoverRef.current = false)}
             >
