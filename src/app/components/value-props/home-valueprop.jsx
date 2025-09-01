@@ -85,10 +85,10 @@ export default function HomeValueProp() {
 <video
   src="/avatar-vid.mp4"
   controls
-  
+  autoPlay
   loop
   playsInline
-  poster="/fallback.jpeg" // fallback image
+  poster="/gen10.jpeg" // fallback image
   className="absolute inset-0 h-full w-full object-cover"
 >
   Your browser does not support the video tag.
