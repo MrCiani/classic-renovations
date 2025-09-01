@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-
 import HeroCta from '@/app/components/cta-folder/Call-to-action';
 import { motion } from 'framer-motion';
 import { Paintbrush, DoorClosed, Ruler, Wind, ShieldCheck, Sparkles } from 'lucide-react';
@@ -9,23 +8,58 @@ import { Paintbrush, DoorClosed, Ruler, Wind, ShieldCheck, Sparkles } from 'luci
 export default function HeroInterior() {
   return (
     <section className="relative overflow-hidden" aria-label="Interior painting services">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 py-16 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 py-12 lg:py-14">
         <div className="grid items-center gap-10 lg:grid-cols-12">
-          {/* Copy */}
+          {/* Image first on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="lg:col-span-6 lg:order-1"
+          >
+            <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-3xl border border-[var(--bg-300)] bg-[var(--bg-200)] shadow-lg">
+              <Image
+                src="/interior-hero.jpeg"
+                alt="Freshly painted interior with neutral walls, crisp trim, and clean ceiling lines"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+
+              {/* Floating pill callout */}
+              <div className="pointer-events-auto absolute bottom-4 right-4">
+                <div className="flex max-w-xs items-start gap-3 rounded-2xl border border-[var(--bg-300)] bg-white/95 p-3 text-sm text-[var(--text-100)] shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-200)]">
+                    <Sparkles className="h-5 w-5 text-[var(--primary-100)]" />
+                  </span>
+                  <div>
+                    <div className="font-semibold">Dust-Controlled Prep</div>
+                    <div className="text-[var(--text-200)]">
+                      HEPA sanding & clean containment for a spotless finish.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Gradient overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+            </div>
+          </motion.div>
+
+          {/* Text second on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="lg:col-span-6"
+            className="lg:col-span-6 lg:order-2"
           >
-          <div className="flex justify-center sm:justify-start">
-            <span className="inline-flex items-center gap-2 uppercase rounded-full px-3 py-1 text-xs font-medium text-[var(--primary-100)]">
-              <Paintbrush className="h-4 w-4" />
-              Trusted by Property Managers Across the GTA
-            </span>
-          </div>
-
-
+            <div className="flex justify-center sm:justify-start">
+              <span className="inline-flex items-center gap-2 uppercase rounded-full px-3 py-1 text-xs font-medium text-[var(--primary-100)]">
+                <Paintbrush className="h-4 w-4" />
+                Trusted by Property Managers Across the GTA
+              </span>
+            </div>
 
             <h1 className="mt-4 text-4xl/tight font-extrabold text-[var(--text-100)] sm:text-5xl">
               Flawless interiors—<span className="text-[var(--primary-100)]">walls, ceilings, trim</span>
@@ -52,10 +86,9 @@ export default function HeroInterior() {
               </li>
             </ul>
 
-            {/* CTAs */}
+            {/* CTA */}
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <HeroCta buttontext="Request a Proposal →" />
- 
             </div>
 
             {/* Trust row */}
@@ -66,43 +99,6 @@ export default function HeroInterior() {
               </div>
               <span className="hidden h-3 w-px bg-[var(--bg-300)] sm:block" />
               <div>Clean site, minimal disruption</div>
-            </div>
-          </motion.div>
-
-          {/* Visual + floating callout */}
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-6"
-          >
-            <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-3xl  border-[var(--bg-300)] bg-[var(--bg-200)] shadow-lg">
-              <Image
-                src="/interior-hero.svg"
-                alt="Freshly painted interior with neutral walls, crisp trim, and clean ceiling lines"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-
-              {/* Floating pill callout (bottom-right) */}
-              <div className="pointer-events-auto absolute bottom-4 right-4">
-                <div className="flex max-w-xs items-start gap-3 rounded-2xl border border-[var(--bg-300)] bg-white/95 p-3 text-sm text-[var(--text-100)] shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--bg-300)] bg-[var(--bg-200)]">
-                    <Sparkles className="h-5 w-5 text-[var(--primary-100)]" />
-                  </span>
-                  <div>
-                    <div className="font-semibold">Dust-Controlled Prep</div>
-                    <div className="text-[var(--text-200)]">
-                      HEPA sanding & clean containment for a spotless finish.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* subtle top gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
             </div>
           </motion.div>
         </div>
