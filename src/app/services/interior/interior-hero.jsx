@@ -76,9 +76,9 @@ export default function HeroInterior() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-6"
           >
-            <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-3xl border border-[var(--bg-300)] bg-[var(--bg-200)] shadow-lg">
+            <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-3xl  border-[var(--bg-300)] bg-[var(--bg-200)] shadow-lg">
               <Image
-                src="/hero1.jpg"
+                src="/interior-hero.svg"
                 alt="Freshly painted interior with neutral walls, crisp trim, and clean ceiling lines"
                 fill
                 className="object-cover"

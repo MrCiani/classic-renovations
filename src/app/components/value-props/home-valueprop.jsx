@@ -80,18 +80,21 @@ export default function HomeValueProp() {
           </p>
         </div>
 
-        {/* Right: image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg border border-[var(--bg-300)] h-[400px] relative">
-          <Image
-            src="/valueprop-images/photo1.jpg"
-            alt="Professional painters applying low-VOC coatings with floors masked and dust-controlled prep"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-            decoding="async"
-            className="object-cover"
-          />
-        </div>
+{/* Right: video */}
+<div className="rounded-2xl overflow-hidden shadow-lg border border-[var(--bg-300)] h-[400px] relative">
+<video
+  src="/avatar-vid.mp4"
+  controls
+  
+  loop
+  playsInline
+  poster="/fallback.jpeg" // fallback image
+  className="absolute inset-0 h-full w-full object-cover"
+>
+  Your browser does not support the video tag.
+</video>
+</div>
+
       </div>
 
       {/* Deterministic JSON-LD (same on server & client) */}
