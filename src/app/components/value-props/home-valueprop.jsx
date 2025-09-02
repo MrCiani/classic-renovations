@@ -83,12 +83,11 @@ export default function HomeValueProp() {
 {/* Right: video */}
 <div className="rounded-2xl overflow-hidden shadow-lg border border-[var(--bg-300)] h-[400px] relative">
 <video
-  src="/avatar-vid.mp4"
+  src="/cc-review.mp4"
   controls
   autoPlay
-  loop
   playsInline
-  poster="/gen10.jpeg" // fallback image
+  poster="/fallback2.jpg" // fallback image
   className="absolute inset-0 h-full w-full object-cover"
 >
   Your browser does not support the video tag.
