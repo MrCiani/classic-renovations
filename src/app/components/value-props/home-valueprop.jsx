@@ -85,7 +85,7 @@ export default function HomeValueProp() {
 import Image from "next/image";
 
 <Image
-  src="/gen5.jpeg"
+  src="/gen8.jpeg"
   alt="SS Reno project"
   fill
   priority
