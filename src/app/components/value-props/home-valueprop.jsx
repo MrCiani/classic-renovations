@@ -82,16 +82,16 @@ export default function HomeValueProp() {
 
 {/* Right: video */}
 <div className="rounded-2xl overflow-hidden shadow-lg border border-[var(--bg-300)] h-[400px] relative">
-<video
-  src="/cc-review.mp4"
-  controls
-  autoPlay
-  playsInline
-  poster="/fallback2.jpg" // fallback image
+import Image from "next/image";
+
+<Image
+  src="/gen5.jpeg"
+  alt="SS Reno project"
+  fill
+  priority
   className="absolute inset-0 h-full w-full object-cover"
->
-  Your browser does not support the video tag.
-</video>
+/>
+
 </div>
 
       </div>
